@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pathology Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS from CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 60px;
+    }
+    .chat-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container chat-container">
+    <div class="card shadow-sm">
+      <div class="card-header text-center bg-primary text-white">
+        <h2>Pathology Chatbot</h2>
+      </div>
+      <div class="card-body">
+        <form id="chat-form">
+          <div class="form-group">
+            <label for="transcript">Enter Pathology Report Transcript</label>
+            <textarea class="form-control" id="transcript" rows="5" placeholder="Type your transcript here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Get AI Response</button>
+        </form>
+        <div id="response-section" class="mt-4" style="display: none;">
+          <h4>AI Response</h4>
+          <pre id="ai-response" class="bg-light p-3 border rounded"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap JS and dependencies from CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('chat-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const transcript = document.getElementById('transcript').value;
+      const responseSection = document.getElementById('response-section');
+      const aiResponse = document.getElementById('ai-response');
+      
+      // Show a loading message
+      aiResponse.textContent = "Processing your transcript...";
+      responseSection.style.display = "block";
+      
+      // Send POST request to the backend API
+      fetch("http://127.0.0.1:8000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: "Your pathology report..." })
+        })
+      .then(response => response.json())
+      .then(data => {
+        // Pretty-print the JSON response
+        aiResponse.textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(error => {
+        aiResponse.textContent = "Error: " + error;
+      });
+    });
+  </script>
+</body>
+</html>
