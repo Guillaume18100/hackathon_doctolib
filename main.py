@@ -1,8 +1,9 @@
-import json
+import re
 from openai import OpenAI
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import PlainTextResponse
 
 app = FastAPI()
 
@@ -35,31 +36,49 @@ client = OpenAI(
 class ChatPayload(BaseModel):
     message: str
 
-@app.post("/chat")
+def remove_chain_of_thought(text: str) -> str:
+    """
+    Removes any text between <think> and </think> tags, including the tags themselves.
+    """
+    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+
+# Endpoint now returns plain text.
+@app.post("/chat", response_class=PlainTextResponse)
 def chat_endpoint(payload: ChatPayload):
     transcript = payload.message
     if not transcript:
-        return {"error": "No transcript provided"}
+        return "Error: No transcript provided."
+    
+    response_text = get_pathology_response(transcript)
+    filtered_text = remove_chain_of_thought(response_text)
+    return filtered_text
 
-    response = get_pathology_response(transcript)
-    return response
-
-# Define a Pydantic schema tailored for pathology responses
-class PathologyResponse(BaseModel):
-    caseSummary: str = Field(..., description="A concise summary of the pathology case details")
-    differentialDiagnosis: list[str] = Field(..., description="List of possible diagnoses")
-    recommendedTests: list[str] = Field(..., description="List of additional tests recommended")
-    additionalNotes: str = Field(..., description="Additional clinical notes or recommendations")
-
-def get_pathology_response(transcript: str) -> dict:
-    extract = client.chat.completions.create(
+def get_pathology_response(transcript: str) -> str:
+    """
+    Sends the pathology transcript to the AI and returns a structured plain text response.
+    The system message instructs the AI to output only the final structured plain text response,
+    ignoring any chain-of-thought or internal reasoning (including text between <think> tags).
+    """
+    result = client.chat.completions.create(
         messages=[
             {
                 "role": "system",
                 "content": (
-                    "You are an AI assistant specialized in pathology. The following is a pathology report transcript. "
-                    "Please provide a structured JSON response with the fields: caseSummary, differentialDiagnosis, "
-                    "recommendedTests, and additionalNotes. Answer only in JSON."
+                    "You are an AI assistant specialized in pathology. The following is a pathology report transcript.\n\n"
+                    "Please provide a structured, easy-to-read plain text response with the following sections:\n\n"
+                    "--------------------------------------------------\n"
+                    "CASE SUMMARY\n"
+                    "--------------------------------------------------\n"
+                    "DIFFERENTIAL DIAGNOSIS (list each diagnosis as a bullet point using '-' for bullets)\n"
+                    "--------------------------------------------------\n"
+                    "RECOMMENDED TESTS (list each test as a bullet point using '-' for bullets)\n"
+                    "--------------------------------------------------\n"
+                    "ADDITIONAL NOTES\n"
+                    "--------------------------------------------------\n\n"
+                    "Ensure each section is clearly separated and formatted for readability. "
+                    "Do not use any markdown formatting symbols (such as asterisks or underscores). "
+                    "Ignore any internal chain-of-thought or reasoning text, including anything enclosed in <think> tags. "
+                    "Output only the final structured plain text response."
                 ),
             },
             {
@@ -68,16 +87,8 @@ def get_pathology_response(transcript: str) -> dict:
             },
         ],
         model=MODEL,
-        response_format={
-            "type": "json_schema",
-            "json_schema": {
-                "name": "PathologyResponse",
-                "schema": PathologyResponse.model_json_schema(),
-            }
-        },
     )
-    output = json.loads(extract.choices[0].message.content)
-    return output
+    return result.choices[0].message.content
 
 if __name__ == "__main__":
     print("=== Pathology Chatbot ===")
@@ -87,9 +98,10 @@ if __name__ == "__main__":
         if transcript.lower().strip() == "exit":
             break
         try:
-            response = get_pathology_response(transcript)
-            print("\nAI Response:")
-            print(json.dumps(response, indent=2))
+            response_text = get_pathology_response(transcript)
+            filtered_text = remove_chain_of_thought(response_text)
+            print("\nAI Response:\n")
+            print(filtered_text)
         except Exception as e:
             print("An error occurred:", e)
         print("\n--------------------------------\n")

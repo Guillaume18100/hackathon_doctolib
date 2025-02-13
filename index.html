@@ -15,6 +15,12 @@
       max-width: 800px;
       margin: 0 auto;
     }
+    /* Preserve white space and line breaks */
+    pre {
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -46,24 +52,28 @@
     document.getElementById('chat-form').addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const transcript = document.getElementById('transcript').value;
+      const transcript = document.getElementById('transcript').value.trim();
       const responseSection = document.getElementById('response-section');
       const aiResponse = document.getElementById('ai-response');
       
-      // Show a loading message
+      if (!transcript) {
+        aiResponse.textContent = "Please enter a pathology report transcript.";
+        responseSection.style.display = "block";
+        return;
+      }
+      
       aiResponse.textContent = "Processing your transcript...";
       responseSection.style.display = "block";
       
-      // Send POST request to the backend API
+      // Send POST request and expect a plain text response
       fetch("http://127.0.0.1:8000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: "Your pathology report..." })
-        })
-      .then(response => response.json())
-      .then(data => {
-        // Pretty-print the JSON response
-        aiResponse.textContent = JSON.stringify(data, null, 2);
+        body: JSON.stringify({ message: transcript })
+      })
+      .then(response => response.text())
+      .then(text => {
+        aiResponse.textContent = text;
       })
       .catch(error => {
         aiResponse.textContent = "Error: " + error;
