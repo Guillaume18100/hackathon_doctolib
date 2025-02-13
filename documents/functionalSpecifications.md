@@ -54,7 +54,7 @@ PathoAI is a **multimodal AI-powered copilot** for **pathologists**. It leverage
 - **Database**: **PostgreSQL** (to store pathology cases & logs)  
 - **AI Models**:  
   - **Vision**: Swin Transformer / CLIP for image classification  
-  - **NLP**: BioGPT / GPT-4 for medical question answering  
+  - **NLP**: Mistral for medical question answering  
   - **Multimodal AI**: PathChat or fine-tuned LLaVA (Large Vision-Language Model)  
 - **Data Preprocessing**: OpenSlide (for WSI processing)  
 - **Containerization**: Docker (to deploy the app)  
