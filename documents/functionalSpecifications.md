@@ -58,7 +58,7 @@ This project addresses the hackathon's focus on **AI for a Healthier Planet and 
 - **Backend**: **FastAPI** (for API management)
 - **Database**: **PostgreSQL** (for storing queries & logs)
 - **AI Models**:
-  - **Vision**: Swin Transformer / [CLIP](https://openai.com/index/clip/) for image classification
+  - **Vision**: Swin Transformer / [Vision Agent](https://github.com/landing-ai/vision-agent) for image classification
   - **NLP**: **Mistral AI via Scaleway Generative APIs**
 - **Containerization**: Docker (for easy deployment)
 
