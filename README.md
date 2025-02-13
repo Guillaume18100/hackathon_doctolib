@@ -2,7 +2,7 @@
 
 # 1. Install Live Server extension on vscode
 # 2 Commands
-**Execute these commands in the vscode terminal one after the other:**
+**Execute these commands in the vscode terminal one after the other:**  
 `python3 -m venv venv && source venv/bin/activate`  
 `pip install fastapi uvicorn requests`  
 `pip install openai pydantic`  
