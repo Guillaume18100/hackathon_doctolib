@@ -2,7 +2,7 @@ name: Bug Report
 description: Report a bug error in the code.
 title: "🐞 [Bug]: "
 labels: ["bug", "error"]
-projects: ["Guillaume18100/hackathon_doctolib"]
+projects: ["ai-pathology-copilot"]
 assignees:
   - Amakran2003
   - Guillaume18100
