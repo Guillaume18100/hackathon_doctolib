@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900">
+    <title>Galileo Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+    
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(25deg); }
+            100% { transform: translateX(100%) rotate(25deg); }
+        }
+    
+        .futuristic-card {
+            backdrop-filter: blur(12px);
+            background: rgba(225, 234, 254, 0.6);
+            border: 1px solid rgba(225, 234, 254, 0.3);
+            box-shadow: 0 8px 32px rgba(5, 6, 109, 0.1);
+            transition: all 0.3s ease;
+        }
+    
+        .hover-glow:hover {
+            box-shadow: 0 6px 24px rgba(5, 6, 109, 0.12);
+            transform: translateY(-2px);
+        }
+    
+        .ai-message {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .ai-message::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                rgba(225, 234, 254, 0) 20%,
+                rgba(225, 234, 254, 0.4) 50%,
+                rgba(225, 234, 254, 0) 80%
+            );
+            animation: shine 4s infinite;
+            pointer-events: none;
+        }
+    
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+    
+        .glass-panel {
+            background: rgba(253, 253, 253, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(225, 234, 254, 0.3);
+            box-shadow: 0 8px 32px rgba(5, 6, 109, 0.05);
+        }
+    
+        .dynamic-border {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .dynamic-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(45deg, #05066D, #E1EAFE);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            box-shadow: 0 2px 12px rgba(5, 6, 109, 0.08);
+        }
+    
+        .ai-bubble {
+            background: #E1EAFE;
+            border: 1px solid rgba(5, 6, 109, 0.1);
+            box-shadow: 0 2px 8px rgba(5, 6, 109, 0.05);
+            color: #05066D;
+        }
+    
+        .user-bubble {
+            background: #05066D;
+            border: 1px solid rgba(225, 234, 254, 0.2);
+            box-shadow: 0 2px 8px rgba(5, 6, 109, 0.1);
+            color: #FDFDFD;
+        }
+    
+        .button-holographic {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #05066D, #05066D, #E1EAFE);
+            background-size: 300% 300%;
+            transition: 0.6s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            color: #FDFDFD;
+            cursor: pointer;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(5, 6, 109, 0.1);
+            gap: 0.5rem;
+        }
+    
+        .button-holographic:hover {
+            background-position: 100% 100%;
+            box-shadow: 0 4px 12px rgba(5, 6, 109, 0.2);
+        }
+    
+        .sidebar-adjustment {
+            margin-left: -30px;
+            padding-right: 20px;
+            transform: translateX(-15px);
+        }
+    
+        .section-heading {
+            padding-left: 1.2rem;
+            transform: translateX(-10px);
+        }
+    
+        .card-padding {
+            padding-left: 1.5rem;
+            padding-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#FDFDFD] overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Header -->
+            <header class="flex items-center justify-between bg-[#E1EAFE]/90 backdrop-blur-md border-b border-[#E1EAFE] px-10 py-3 sticky top-0 z-10">
+                <div class="flex items-center gap-4 text-[#05066D]">
+                    <div class="size-4">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-[#05066D] text-lg font-bold leading-tight tracking-[-0.015em]">PathAI</h2>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <label class="flex flex-col min-w-40 !h-10 max-w-64">
+                        <div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+                            <div class="text-[#05066D] flex border-none bg-[#FDFDFD] items-center justify-center pl-4 rounded-l-xl border-r-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/>
+                                </svg>
+                            </div>
+                            <input placeholder="Search" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#05066D] focus:outline-0 focus:ring-0 border-none bg-[#FDFDFD] focus:border-none h-full placeholder:text-[#05066D] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" value=""/>
+                        </div>
+                    </label>
+                    <div class="flex gap-2">
+                        <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#05066D] text-[#FDFDFD] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                            <div class="text-[#FDFDFD]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"/>
+                                </svg>
+                            </div>
+                        </button>
+                        <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#05066D] text-[#FDFDFD] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+                            <div class="text-[#FDFDFD]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/c1f159ed-ae93-44a2-899e-0f99278a3392.png");'></div>
+                </div>
+            </header>
+
+            <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+                <!-- Left Sidebar - Adjusted -->
+                <div class="flex flex-col w-80 gap-3 sidebar-adjustment">
+                    <h2 class="section-heading text-[#05066D] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Quick Start</h2>
+                    
+                    <!-- Quick Start Items -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 card-padding min-h-14 justify-between rounded-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/>
+                                </svg>
+                            </div>
+                            <p class="text-[#05066D] text-base font-normal leading-normal flex-1 truncate">Upload slide</p>
+                        </div>
+                        <div class="text-[#05066D] flex size-7 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- View Cases -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 card-padding min-h-14 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/>
+                                </svg>
+                            </div>
+                            <p class="text-[#05066D] text-base font-normal leading-normal flex-1 truncate">View cases</p>
+                        </div>
+                        <div class="text-[#05066D] flex size-7 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Chat with AI -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 card-padding min-h-14 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>
+                                </svg>
+                            </div>
+                            <p class="text-[#05066D] text-base font-normal leading-normal flex-1 truncate">Chat with AI</p>
+                        </div>
+                        <div class="text-[#05066D] flex size-7 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Create Report -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 card-padding min-h-14 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                    <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/>
+                                </svg>
+                            </div>
+                            <p class="text-[#05066D] text-base font-normal leading-normal flex-1 truncate">Create report</p>
+                        </div>
+                        <div class="text-[#05066D] flex size-7 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Patient Data Section -->
+                    <h2 class="section-heading text-[#05066D] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-0 pt-5">
+                        Patient Data
+                      </h2>
+                      <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                        <label class="flex flex-col min-w-40 flex-1">
+                          <input
+                            type="text"
+                            placeholder="Jane Smith, Mike Johnson, Emily Davis"
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl 
+                                   text-[#05066D] bg-[#E1EAFE] border border-[#05066D]/20 
+                                   focus:outline-0 focus:ring-0 focus:border-[#05066D]/50 
+                                   h-14 p-4 text-base font-normal leading-normal placeholder:text-[#05066D]"
+                          />
+                        </label>
+                      </div>
+
+                    <h2 class="section-heading text-[#05066D] text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Severity Ranking</h2>
+                    
+                    <!-- Severity Items -->
+                    <!-- Case 123 - High (red heart) -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 px-4 min-h-[72px] py-2 justify-between rounded-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-12">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="red" viewBox="0 0 256 256">
+                                    <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-[#05066D] text-base font-medium leading-normal">Case 123 - High</p>
+                                <p class="text-[#05066D] text-sm font-normal leading-normal">Patient name: Jane Smith</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0"><p class="text-[#05066D] text-base font-normal leading-normal">12/03/2025</p></div>
+                    </div>
+
+                    <!-- Case 124 - Moderate (orange heart) -->
+                    <div class="futuristic-card hover-glow flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-12">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="orange" viewBox="0 0 256 256">
+                                    <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-[#05066D] text-base font-medium leading-normal">Case 124 - Moderate</p>
+                                <p class="text-[#05066D] text-sm font-normal leading-normal">Patient name: Mike Johnson</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0">
+                            <p class="text-[#05066D] text-base font-normal leading-normal">12/3/2023</p>
+                        </div>
+                    </div>
+
+                    <!-- Case 125 - Low (yellow heart) -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 px-4 min-h-[72px] py-2 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-12">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="yellow" viewBox="0 0 256 256">
+                                    <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-[#05066D] text-base font-medium leading-normal">Case 125 - Low</p>
+                                <p class="text-[#05066D] text-sm font-normal leading-normal">Patient name: Emily Davis</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0"><p class="text-[#05066D] text-base font-normal leading-normal">12/03/2025</p></div>
+                    </div>
+
+                    <!-- Case 126 - High (green heart) -->
+                    <div class="futuristic-card hover-glow flex items-center gap-0 px-4 min-h-[72px] py-2 justify-between rounded-xl mt-2">
+                        <div class="flex items-center gap-4">
+                            <div class="text-[#FDFDFD] flex items-center justify-center rounded-lg bg-[#05066D] shrink-0 size-12">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="green" viewBox="0 0 256 256">
+                                    <path d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="text-[#05066D] text-base font-medium leading-normal">Case 126 - High</p>
+                                <p class="text-[#05066D] text-sm font-normal leading-normal">Patient name: David Clark</p>
+                            </div>
+                        </div>
+                        <div class="shrink-0"><p class="text-[#05066D] text-base font-normal leading-normal">12/03/2025</p></div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="flex flex-col max-w-[700px] flex-1 gap-4">
+                    <!-- Main Content -->
+                    <h1 class="text-[#05066D] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">Pathology assistant</h1>
+                    
+                    <!-- Microscope Image -->
+                    <div class="floating-element dynamic-border w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4b78ffd6-120a-4d30-a00a-b5cb196c43d7.png");'></div>
+
+                    <!-- Chat Section -->
+                    <h2 class="text-[#05066D] tracking-light text-[32px] font-bold leading-tight px-0 text-left pb-0 pt-6">Ai Chat</h2>
+                    <!-- AI Chat -->
+                    <div class="glass-panel rounded-xl p-4">
+                        <!-- Initial AI Message -->
+                        <div class="ai-message flex items-end gap-3 p-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/7f8a9b98-64c0-4a54-93d2-280b5c9b472e.png");'></div>
+                            <div class="flex flex-1 flex-col gap-1 items-start">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#E1EAFE] text-[#05066D] border border-[#05066D]/10">
+                                    Hello, how can I help you today?
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- User Message -->
+                        <div class="flex items-end gap-3 p-4 justify-end">
+                            <div class="flex flex-1 flex-col gap-1 items-end">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px] text-right">You</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#05066D] text-[#FDFDFD] border border-[#E1EAFE]/20">
+                                    I have a question about the diagnosis for patient X
+                                </p>
+                            </div>
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/e0d7c39c-e16d-44a7-a53f-6fcf5e870781.png");'></div>
+                        </div>
+                    
+                        <!-- AI Response -->
+                        <div class="ai-message flex items-end gap-3 p-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/54e2df26-b511-4051-8d3e-393185c45d18.png");'></div>
+                            <div class="flex flex-1 flex-col gap-1 items-start">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#E1EAFE] text-[#05066D] border border-[#05066D]/10">
+                                    Sure, what's your question?
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <!-- User Follow-up -->
+                        <div class="flex items-end gap-3 p-4 justify-end">
+                            <div class="flex flex-1 flex-col gap-1 items-end">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px] text-right">You</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#05066D] text-[#FDFDFD] border border-[#E1EAFE]/20">
+                                    I'm not sure about the severity of the condition
+                                </p>
+                            </div>
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/b3557f2c-b2d6-4039-9651-9a09b94fb5d6.png");'></div>
+                        </div>
+                    
+                        <!-- Final AI Responses -->
+                        <div class="ai-message flex items-end gap-3 p-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/1571e689-860f-4d01-9aeb-667c7da15543.png");'></div>
+                            <div class="flex flex-1 flex-col gap-1 items-start">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#E1EAFE] text-[#05066D] border border-[#05066D]/10">
+                                    Let me check that for you...
+                                </p>
+                            </div>
+                        </div>
+                    
+                        <div class="ai-message flex items-end gap-3 p-4">
+                            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0" 
+                                 style='background-image: url("https://cdn.usegalileo.ai/sdxl10/89906d17-e0ec-4366-a95d-1923c57bdeec.png");'></div>
+                            <div class="flex flex-1 flex-col gap-1 items-start">
+                                <p class="text-[#05066D] text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+                                <p class="text-base font-normal leading-normal flex max-w-[360px] rounded-xl px-4 py-3 bg-[#E1EAFE] text-[#05066D] border border-[#05066D]/10">
+                                    Based on the latest scan, the severity is moderate
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Input Section -->
+                    <div class="glass-panel rounded-xl p-4">
+                        <input class="futuristic-card w-full h-14 px-4 rounded-xl border border-[#E1EAFE]/30 focus:border-[#05066D]/20 focus:ring-2 focus:ring-[#05066D]/10 text-[#05066D] placeholder-[#05066D]"/>
+                        <button class="button-holographic hover-glow mt-4 text-[#FDFDFD] px-4 py-2 rounded-xl transition-all duration-300">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
