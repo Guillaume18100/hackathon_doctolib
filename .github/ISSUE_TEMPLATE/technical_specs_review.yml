@@ -1,0 +1,36 @@
+name: Technical Specifications Review
+description: Provide feedback on the technical aspects of AI Pathology Copilot.
+title: "🔧 [Tech Review]: "
+labels: ["review", "technical"]
+projects: ["ai-pathology-copilot"]
+assignees: []  # Add team members as needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🔧 **Technical Specifications Review**  
+        Provide your insights and suggestions regarding the technical architecture and implementation of AI Pathology Copilot.
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date
+      description: Specify the date when this review is being submitted.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: textarea
+    id: review-description
+    attributes:
+      label: 📝 Review Details
+      description: Outline your review of the technical aspects, including any issues or potential improvements.
+      placeholder: "Detailed review..."
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Provide any extra context or supporting information.
+      placeholder: "Additional details..."
+    validations:
+      required: false
