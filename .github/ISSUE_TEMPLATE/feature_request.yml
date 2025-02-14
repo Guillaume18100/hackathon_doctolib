@@ -1,0 +1,63 @@
+name: Feature Request
+description: Suggest a new feature or improvement for AI Pathology Copilot.
+title: "✨ [Feature]: "
+labels: ["enhancement", "feature request"]
+projects: ["ai-pathology-copilot"]
+assignees: []  # Add team members as needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        💡 **Feature Request for AI Pathology Copilot**  
+        Describe your idea in detail to help us understand the proposed enhancement.
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date of Request
+      description: Specify the date when you are submitting this feature request.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: ✨ Feature Description
+      description: Describe the proposed feature or improvement.
+      placeholder: "A clear and concise description of the feature..."
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: 🚀 Benefits
+      description: Explain how this feature would improve the system or benefit pathologists.
+      placeholder: "Benefits for users, workflow, etc..."
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 🔧 Implementation Ideas
+      description: Provide any ideas on how to implement this feature.
+      placeholder: "Potential approaches or technologies..."
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: ⏫ Priority
+      description: How important is this feature?
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Any extra details or context.
+      placeholder: "Additional context..."
+    validations:
+      required: false
