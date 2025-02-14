@@ -2,7 +2,7 @@ name: Typography Report
 description: Report a typography error in project documents.
 title: "✏️ [Typography]: "
 labels: ["documentation", "typography"]
-projects: ["algosup/2024-2025-project-3-quickest-path-team-7"]
+projects: ["Guillaume18100/hackaton_doctolib"]
 assignees:
   - Amakran2003
   - Guillaume18100
