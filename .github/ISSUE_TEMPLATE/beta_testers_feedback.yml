@@ -1,0 +1,36 @@
+name: Beta Tester Feedback
+description: Provide feedback from beta testing sessions for AI Pathology Copilot.
+title: "📝 [Feedback]: "
+labels: ["feedback", "beta"]
+projects: ["ai-pathology-copilot"]
+assignees: []  # Add team members as needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        📝 **Beta Tester Feedback**  
+        Share your experiences and suggestions after testing AI Pathology Copilot.
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date
+      description: Specify the date when you are providing feedback.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: 💬 Feedback
+      description: Provide your detailed feedback including usability, performance, and any issues encountered.
+      placeholder: "Your feedback..."
+    validations:
+      required: true
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: 💡 Suggestions
+      description: Suggest improvements or new features.
+      placeholder: "Any suggestions..."
+    validations:
+      required: false
