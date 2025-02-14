@@ -1,0 +1,60 @@
+name: Test Case
+description: Document a test case for AI Pathology Copilot functionalities.
+title: "🧪 [Test Case]: "
+labels: ["test", "quality assurance"]
+projects: ["ai-pathology-copilot"]
+assignees: []  # Add team members as needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🧪 **Test Case for AI Pathology Copilot**  
+        Outline the steps and expected outcomes for this test case.
+  - type: input
+    id: date
+    attributes:
+      label: 📅 Date
+      description: Specify the date when the test case is created.
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: textarea
+    id: test-case-description
+    attributes:
+      label: 📝 Test Case Description
+      description: Describe the scenario and objective of this test case.
+      placeholder: "Detailed description of the test case..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔄 Steps to Execute
+      description: List the steps required to execute the test.
+      placeholder: "1. Step one. 2. Step two. 3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: 🎯 Expected Outcome
+      description: Describe what should happen when the test is executed.
+      placeholder: "Expected results..."
+    validations:
+      required: true
+  - type: textarea
+    id: actual-outcome
+    attributes:
+      label: ❓ Actual Outcome (if applicable)
+      description: Describe the actual outcome if the test has been executed.
+      placeholder: "Actual results..."
+    validations:
+      required: false
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: ℹ️ Additional Information
+      description: Provide any additional context or details.
+      placeholder: "Additional details..."
+    validations:
+      required: false
