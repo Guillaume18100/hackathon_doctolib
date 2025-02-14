@@ -2,7 +2,7 @@ name: Bug Report
 description: Report a bug error in the code.
 title: "🐞 [Bug]: "
 labels: ["bug", "error"]
-projects: ["algosup/2024-2025-project-3-quickest-path-team-7"]
+projects: ["Guillaume18100/hackathon_doctolib"]
 assignees:
   - Amakran2003
   - Guillaume18100
