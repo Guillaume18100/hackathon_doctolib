@@ -16,7 +16,9 @@ model = "mistral-large-latest"
 class Risk(BaseModel):
     risk: str
     severity_level: str
-    advise: str
+    therapeutic_goal: str
+    doctor_advise: str
+    patient_advise: str
     observations: str
 
 class RisksResponse(BaseModel):
@@ -30,7 +32,7 @@ def load_patient_data(file_path: str) -> str:
     data = pd.read_csv(file_path)
     return data.to_json(orient="records")
 
-def create_chat_messages(patient_data_json: str) -> list:
+def create_chat_messages(observations_data_json: str, lifestyle_data_json: str) -> list:
     """Creates chat messages with system instructions and patient data."""
     return [
         {
@@ -41,7 +43,11 @@ def create_chat_messages(patient_data_json: str) -> list:
             "role": "user",
             "content": f"""### Instructions
     
-    I will provide you with observations data for one patient. Please follow the methodology provided below and output the diabetes risk probability (0-100%). Provide a brief explanation of each component, severity level and advise to reduce the risk. If the patient data is missing on some component, mark `severity_level` as Unknown, alert the healcare professional about the necessity to fill in the missing info, through analisys performance or questionnaire.
+    I will provide you with observations data for one patient. Please follow the methodology provided below and output the diabetes risk probability (0-100%). Provide a brief explanation of each component, severity level and advise to reduce the risk.
+
+    Be as specific as possible in terms of advise: a concrete action for the patient in terms of lifestyle, a concrete medication to prescribe, a concrete analysis to perform.
+    
+    If the patient data is missing on some component, mark `severity_level` as Unknown, alert the healcare professional about the necessity to fill in the missing info, through analisys performance, treatement, or questionnaire. The advise should contain exact actions enriched with numbers of potential improvement of a given component (like "A balanced diet could reduce cholesterol level by 40%").
 
     ###Methodology by component
 
@@ -90,7 +96,10 @@ def create_chat_messages(patient_data_json: str) -> list:
     ### Patient data: 
 
     Medical observations: 
-    {patient_data_json}
+    {observations_data_json}
+
+    Lifestyle data: 
+    {observations_data_json}
     
     ### Potential primary risks:"""
         },
@@ -106,10 +115,12 @@ def get_chat_response(client, model, messages, response_format, max_tokens=2048,
         temperature=temperature
     )
 
-def main(file_path):
+def main(observations_data, lifestyle_data):
     """Main function to execute the workflow."""
-    patient_data_json = load_patient_data(file_path)
-    messages = create_chat_messages(patient_data_json)
+    observations_data_json = load_patient_data(observations_data)
+    lifestyle_data_json = load_patient_data(lifestyle_data)
+
+    messages = create_chat_messages(observations_data_json, lifestyle_data_json)
 
     chat_response = get_chat_response(
         client=client,
@@ -121,4 +132,5 @@ def main(file_path):
     print(chat_response.choices[0].message.content)
 
 if __name__ == "__main__":
-    main("data/observations/patient_1.csv")
+    main("data/observations/patient_1.csv", "metadata/patient_1.csv")
+    
