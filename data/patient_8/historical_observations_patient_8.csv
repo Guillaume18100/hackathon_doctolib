@@ -1,148 +1,148 @@
-resource.effectiveDateTime,resource.valueQuantity.value,resource.valueQuantity.unit,date,resource.code.display
-2010-06-01T23:13:24-04:00,45.0,%,2010-06-01,FEV1/​FVC
-2010-06-01T23:13:24-04:00,6.8,%,2010-06-01,Hemoglobin A1c/Hemoglobin.total in Blood
-2010-06-01T23:13:24-04:00,184.42390619105703,cm,2010-06-01,Body Height
-2010-06-01T23:13:24-04:00,113.24649373985994,kg,2010-06-01,Body Weight
-2010-06-01T23:13:24-04:00,33.2958672883407,kg/m2,2010-06-01,Body Mass Index
-2010-06-01T23:13:24-04:00,,,2010-06-01,Blood Pressure
-2010-06-01T23:13:24-04:00,6.8,%,2010-06-01,Hemoglobin A1c/Hemoglobin.total in Blood
-2010-06-01T23:13:24-04:00,118.0,mg/dL,2010-06-01,Glucose
-2010-06-01T23:13:24-04:00,20.0,mg/dL,2010-06-01,Urea Nitrogen
-2010-06-01T23:13:24-04:00,1.0,mg/dL,2010-06-01,Creatinine
-2010-06-01T23:13:24-04:00,9.953180925920822,mg/dL,2010-06-01,Calcium
-2010-06-01T23:13:24-04:00,139.0,mmol/L,2010-06-01,Sodium
-2010-06-01T23:13:24-04:00,4.472261231875014,mmol/L,2010-06-01,Potassium
-2010-06-01T23:13:24-04:00,105.0,mmol/L,2010-06-01,Chloride
-2010-06-01T23:13:24-04:00,22.0,mmol/L,2010-06-01,Carbon Dioxide
-2010-06-01T23:13:24-04:00,208.0,mg/dL,2010-06-01,Total Cholesterol
-2010-06-01T23:13:24-04:00,167.0,mg/dL,2010-06-01,Triglycerides
-2010-06-01T23:13:24-04:00,128.0,mg/dL,2010-06-01,Low Density Lipoprotein Cholesterol
-2010-06-01T23:13:24-04:00,46.0,mg/dL,2010-06-01,High Density Lipoprotein Cholesterol
-2010-06-01T23:13:24-04:00,0.0,mg/g,2010-06-01,Microalbumin Creatine Ratio
-2010-06-01T23:13:24-04:00,0.0,mL/min/{1.73_m2},2010-06-01,Estimated Glomerular Filtration Rate
-2011-07-31T06:21:52-04:00,32.0,%,2011-07-31,FEV1/​FVC
-2011-07-31T06:21:52-04:00,6.8,%,2011-07-31,Hemoglobin A1c/Hemoglobin.total in Blood
-2011-07-31T06:21:52-04:00,184.42390619105703,cm,2011-07-31,Body Height
-2011-07-31T06:21:52-04:00,113.24649373985994,kg,2011-07-31,Body Weight
-2011-07-31T06:21:52-04:00,33.2958672883407,kg/m2,2011-07-31,Body Mass Index
-2011-07-31T06:21:52-04:00,,,2011-07-31,Blood Pressure
-2011-07-31T06:21:52-04:00,6.8,%,2011-07-31,Hemoglobin A1c/Hemoglobin.total in Blood
-2011-07-31T06:21:52-04:00,106.0,mg/dL,2011-07-31,Glucose
-2011-07-31T06:21:52-04:00,11.0,mg/dL,2011-07-31,Urea Nitrogen
-2011-07-31T06:21:52-04:00,1.0,mg/dL,2011-07-31,Creatinine
-2011-07-31T06:21:52-04:00,9.122140746944174,mg/dL,2011-07-31,Calcium
-2011-07-31T06:21:52-04:00,140.0,mmol/L,2011-07-31,Sodium
-2011-07-31T06:21:52-04:00,5.069817960097572,mmol/L,2011-07-31,Potassium
-2011-07-31T06:21:52-04:00,108.0,mmol/L,2011-07-31,Chloride
-2011-07-31T06:21:52-04:00,28.0,mmol/L,2011-07-31,Carbon Dioxide
-2011-07-31T06:21:52-04:00,232.0,mg/dL,2011-07-31,Total Cholesterol
-2011-07-31T06:21:52-04:00,192.0,mg/dL,2011-07-31,Triglycerides
-2011-07-31T06:21:52-04:00,145.0,mg/dL,2011-07-31,Low Density Lipoprotein Cholesterol
-2011-07-31T06:21:52-04:00,48.0,mg/dL,2011-07-31,High Density Lipoprotein Cholesterol
-2011-07-31T06:21:52-04:00,13.0,mg/g,2011-07-31,Microalbumin Creatine Ratio
-2011-07-31T06:21:52-04:00,0.0,mL/min/{1.73_m2},2011-07-31,Estimated Glomerular Filtration Rate
-2012-09-03T20:50:17-04:00,38.0,%,2012-09-03,FEV1/​FVC
-2012-09-03T20:50:17-04:00,6.8,%,2012-09-03,Hemoglobin A1c/Hemoglobin.total in Blood
-2012-09-03T20:50:17-04:00,184.42390619105703,cm,2012-09-03,Body Height
-2012-09-03T20:50:17-04:00,113.24649373985994,kg,2012-09-03,Body Weight
-2012-09-03T20:50:17-04:00,33.2958672883407,kg/m2,2012-09-03,Body Mass Index
-2012-09-03T20:50:17-04:00,,,2012-09-03,Blood Pressure
-2012-09-03T20:50:17-04:00,6.8,%,2012-09-03,Hemoglobin A1c/Hemoglobin.total in Blood
-2012-09-03T20:50:17-04:00,114.0,mg/dL,2012-09-03,Glucose
-2012-09-03T20:50:17-04:00,12.0,mg/dL,2012-09-03,Urea Nitrogen
-2012-09-03T20:50:17-04:00,1.0,mg/dL,2012-09-03,Creatinine
-2012-09-03T20:50:17-04:00,9.428536248791225,mg/dL,2012-09-03,Calcium
-2012-09-03T20:50:17-04:00,143.0,mmol/L,2012-09-03,Sodium
-2012-09-03T20:50:17-04:00,4.629985878506029,mmol/L,2012-09-03,Potassium
-2012-09-03T20:50:17-04:00,104.0,mmol/L,2012-09-03,Chloride
-2012-09-03T20:50:17-04:00,28.0,mmol/L,2012-09-03,Carbon Dioxide
-2012-09-03T20:50:17-04:00,229.0,mg/dL,2012-09-03,Total Cholesterol
-2012-09-03T20:50:17-04:00,159.0,mg/dL,2012-09-03,Triglycerides
-2012-09-03T20:50:17-04:00,150.0,mg/dL,2012-09-03,Low Density Lipoprotein Cholesterol
-2012-09-03T20:50:17-04:00,47.0,mg/dL,2012-09-03,High Density Lipoprotein Cholesterol
-2012-09-03T20:50:17-04:00,5.0,mg/g,2012-09-03,Microalbumin Creatine Ratio
-2012-09-03T20:50:17-04:00,0.0,mL/min/{1.73_m2},2012-09-03,Estimated Glomerular Filtration Rate
-2013-08-29T15:51:22-04:00,32.0,%,2013-08-29,FEV1/​FVC
-2013-08-29T15:51:22-04:00,6.8,%,2013-08-29,Hemoglobin A1c/Hemoglobin.total in Blood
-2013-08-29T15:51:22-04:00,184.42390619105703,cm,2013-08-29,Body Height
-2013-08-29T15:51:22-04:00,113.24649373985994,kg,2013-08-29,Body Weight
-2013-08-29T15:51:22-04:00,33.2958672883407,kg/m2,2013-08-29,Body Mass Index
-2013-08-29T15:51:22-04:00,,,2013-08-29,Blood Pressure
-2013-08-29T15:51:22-04:00,6.8,%,2013-08-29,Hemoglobin A1c/Hemoglobin.total in Blood
-2013-08-29T15:51:22-04:00,109.0,mg/dL,2013-08-29,Glucose
-2013-08-29T15:51:22-04:00,18.0,mg/dL,2013-08-29,Urea Nitrogen
-2013-08-29T15:51:22-04:00,1.0,mg/dL,2013-08-29,Creatinine
-2013-08-29T15:51:22-04:00,8.765849648615,mg/dL,2013-08-29,Calcium
-2013-08-29T15:51:22-04:00,142.0,mmol/L,2013-08-29,Sodium
-2013-08-29T15:51:22-04:00,4.843029323573503,mmol/L,2013-08-29,Potassium
-2013-08-29T15:51:22-04:00,111.0,mmol/L,2013-08-29,Chloride
-2013-08-29T15:51:22-04:00,27.0,mmol/L,2013-08-29,Carbon Dioxide
-2013-08-29T15:51:22-04:00,222.0,mg/dL,2013-08-29,Total Cholesterol
-2013-08-29T15:51:22-04:00,162.0,mg/dL,2013-08-29,Triglycerides
-2013-08-29T15:51:22-04:00,145.0,mg/dL,2013-08-29,Low Density Lipoprotein Cholesterol
-2013-08-29T15:51:22-04:00,44.0,mg/dL,2013-08-29,High Density Lipoprotein Cholesterol
-2013-08-29T15:51:22-04:00,17.0,mg/g,2013-08-29,Microalbumin Creatine Ratio
-2013-08-29T15:51:22-04:00,0.0,mL/min/{1.73_m2},2013-08-29,Estimated Glomerular Filtration Rate
-2014-07-15T09:04:52-04:00,27.0,%,2014-07-15,FEV1/​FVC
-2014-07-15T09:04:52-04:00,6.8,%,2014-07-15,Hemoglobin A1c/Hemoglobin.total in Blood
-2014-07-15T09:04:52-04:00,184.42390619105703,cm,2014-07-15,Body Height
-2014-07-15T09:04:52-04:00,113.24649373985994,kg,2014-07-15,Body Weight
-2014-07-15T09:04:52-04:00,33.2958672883407,kg/m2,2014-07-15,Body Mass Index
-2014-07-15T09:04:52-04:00,,,2014-07-15,Blood Pressure
-2014-07-15T09:04:52-04:00,6.8,%,2014-07-15,Hemoglobin A1c/Hemoglobin.total in Blood
-2014-07-15T09:04:52-04:00,108.0,mg/dL,2014-07-15,Glucose
-2014-07-15T09:04:52-04:00,13.0,mg/dL,2014-07-15,Urea Nitrogen
-2014-07-15T09:04:52-04:00,1.0,mg/dL,2014-07-15,Creatinine
-2014-07-15T09:04:52-04:00,9.118837222332406,mg/dL,2014-07-15,Calcium
-2014-07-15T09:04:52-04:00,142.0,mmol/L,2014-07-15,Sodium
-2014-07-15T09:04:52-04:00,5.090960745976218,mmol/L,2014-07-15,Potassium
-2014-07-15T09:04:52-04:00,104.0,mmol/L,2014-07-15,Chloride
-2014-07-15T09:04:52-04:00,29.0,mmol/L,2014-07-15,Carbon Dioxide
-2014-07-15T09:04:52-04:00,205.0,mg/dL,2014-07-15,Total Cholesterol
-2014-07-15T09:04:52-04:00,162.0,mg/dL,2014-07-15,Triglycerides
-2014-07-15T09:04:52-04:00,125.0,mg/dL,2014-07-15,Low Density Lipoprotein Cholesterol
-2014-07-15T09:04:52-04:00,47.0,mg/dL,2014-07-15,High Density Lipoprotein Cholesterol
-2014-07-15T09:04:52-04:00,1.0,mg/g,2014-07-15,Microalbumin Creatine Ratio
-2014-07-15T09:04:52-04:00,0.0,mL/min/{1.73_m2},2014-07-15,Estimated Glomerular Filtration Rate
-2015-08-11T11:18:37-04:00,18.0,%,2015-08-11,FEV1/​FVC
-2015-08-11T11:18:37-04:00,6.8,%,2015-08-11,Hemoglobin A1c/Hemoglobin.total in Blood
-2015-08-11T11:18:37-04:00,184.42390619105703,cm,2015-08-11,Body Height
-2015-08-11T11:18:37-04:00,113.24649373985994,kg,2015-08-11,Body Weight
-2015-08-11T11:18:37-04:00,33.2958672883407,kg/m2,2015-08-11,Body Mass Index
-2015-08-11T11:18:37-04:00,,,2015-08-11,Blood Pressure
-2015-08-11T11:18:37-04:00,6.8,%,2015-08-11,Hemoglobin A1c/Hemoglobin.total in Blood
-2015-08-11T11:18:37-04:00,104.0,mg/dL,2015-08-11,Glucose
-2015-08-11T11:18:37-04:00,15.0,mg/dL,2015-08-11,Urea Nitrogen
-2015-08-11T11:18:37-04:00,1.0,mg/dL,2015-08-11,Creatinine
-2015-08-11T11:18:37-04:00,9.931321519683591,mg/dL,2015-08-11,Calcium
-2015-08-11T11:18:37-04:00,141.0,mmol/L,2015-08-11,Sodium
-2015-08-11T11:18:37-04:00,5.029094407978846,mmol/L,2015-08-11,Potassium
-2015-08-11T11:18:37-04:00,103.0,mmol/L,2015-08-11,Chloride
-2015-08-11T11:18:37-04:00,27.0,mmol/L,2015-08-11,Carbon Dioxide
-2015-08-11T11:18:37-04:00,225.0,mg/dL,2015-08-11,Total Cholesterol
-2015-08-11T11:18:37-04:00,157.0,mg/dL,2015-08-11,Triglycerides
-2015-08-11T11:18:37-04:00,134.0,mg/dL,2015-08-11,Low Density Lipoprotein Cholesterol
-2015-08-11T11:18:37-04:00,59.0,mg/dL,2015-08-11,High Density Lipoprotein Cholesterol
-2015-08-11T11:18:37-04:00,12.0,mg/g,2015-08-11,Microalbumin Creatine Ratio
-2015-08-11T11:18:37-04:00,0.0,mL/min/{1.73_m2},2015-08-11,Estimated Glomerular Filtration Rate
-2016-09-21T13:37:24-04:00,20.0,%,2016-09-21,FEV1/​FVC
-2016-09-21T13:37:24-04:00,6.8,%,2016-09-21,Hemoglobin A1c/Hemoglobin.total in Blood
-2016-09-21T13:37:24-04:00,184.42390619105703,cm,2016-09-21,Body Height
-2016-09-21T13:37:24-04:00,113.24649373985994,kg,2016-09-21,Body Weight
-2016-09-21T13:37:24-04:00,33.2958672883407,kg/m2,2016-09-21,Body Mass Index
-2016-09-21T13:37:24-04:00,,,2016-09-21,Blood Pressure
-2016-09-21T13:37:24-04:00,6.8,%,2016-09-21,Hemoglobin A1c/Hemoglobin.total in Blood
-2016-09-21T13:37:24-04:00,123.0,mg/dL,2016-09-21,Glucose
-2016-09-21T13:37:24-04:00,14.0,mg/dL,2016-09-21,Urea Nitrogen
-2016-09-21T13:37:24-04:00,1.0,mg/dL,2016-09-21,Creatinine
-2016-09-21T13:37:24-04:00,8.602166818586303,mg/dL,2016-09-21,Calcium
-2016-09-21T13:37:24-04:00,140.0,mmol/L,2016-09-21,Sodium
-2016-09-21T13:37:24-04:00,4.305126086147105,mmol/L,2016-09-21,Potassium
-2016-09-21T13:37:24-04:00,101.0,mmol/L,2016-09-21,Chloride
-2016-09-21T13:37:24-04:00,20.0,mmol/L,2016-09-21,Carbon Dioxide
-2016-09-21T13:37:24-04:00,205.0,mg/dL,2016-09-21,Total Cholesterol
-2016-09-21T13:37:24-04:00,188.0,mg/dL,2016-09-21,Triglycerides
-2016-09-21T13:37:24-04:00,126.0,mg/dL,2016-09-21,Low Density Lipoprotein Cholesterol
-2016-09-21T13:37:24-04:00,41.0,mg/dL,2016-09-21,High Density Lipoprotein Cholesterol
-2016-09-21T13:37:24-04:00,7.0,mg/g,2016-09-21,Microalbumin Creatine Ratio
-2016-09-21T13:37:24-04:00,0.0,mL/min/{1.73_m2},2016-09-21,Estimated Glomerular Filtration Rate
+value,unit,date,code
+45.0,%,2010-06-01,FEV1/​FVC
+6.8,%,2010-06-01,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2010-06-01,Body Height
+113.24649373985994,kg,2010-06-01,Body Weight
+33.2958672883407,kg/m2,2010-06-01,Body Mass Index
+,,2010-06-01,Blood Pressure
+6.8,%,2010-06-01,Hemoglobin A1c/Hemoglobin.total in Blood
+118.0,mg/dL,2010-06-01,Glucose
+20.0,mg/dL,2010-06-01,Urea Nitrogen
+1.0,mg/dL,2010-06-01,Creatinine
+9.953180925920822,mg/dL,2010-06-01,Calcium
+139.0,mmol/L,2010-06-01,Sodium
+4.472261231875014,mmol/L,2010-06-01,Potassium
+105.0,mmol/L,2010-06-01,Chloride
+22.0,mmol/L,2010-06-01,Carbon Dioxide
+208.0,mg/dL,2010-06-01,Total Cholesterol
+167.0,mg/dL,2010-06-01,Triglycerides
+128.0,mg/dL,2010-06-01,Low Density Lipoprotein Cholesterol
+46.0,mg/dL,2010-06-01,High Density Lipoprotein Cholesterol
+0.0,mg/g,2010-06-01,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2010-06-01,Estimated Glomerular Filtration Rate
+32.0,%,2011-07-31,FEV1/​FVC
+6.8,%,2011-07-31,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2011-07-31,Body Height
+113.24649373985994,kg,2011-07-31,Body Weight
+33.2958672883407,kg/m2,2011-07-31,Body Mass Index
+,,2011-07-31,Blood Pressure
+6.8,%,2011-07-31,Hemoglobin A1c/Hemoglobin.total in Blood
+106.0,mg/dL,2011-07-31,Glucose
+11.0,mg/dL,2011-07-31,Urea Nitrogen
+1.0,mg/dL,2011-07-31,Creatinine
+9.122140746944174,mg/dL,2011-07-31,Calcium
+140.0,mmol/L,2011-07-31,Sodium
+5.069817960097572,mmol/L,2011-07-31,Potassium
+108.0,mmol/L,2011-07-31,Chloride
+28.0,mmol/L,2011-07-31,Carbon Dioxide
+232.0,mg/dL,2011-07-31,Total Cholesterol
+192.0,mg/dL,2011-07-31,Triglycerides
+145.0,mg/dL,2011-07-31,Low Density Lipoprotein Cholesterol
+48.0,mg/dL,2011-07-31,High Density Lipoprotein Cholesterol
+13.0,mg/g,2011-07-31,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2011-07-31,Estimated Glomerular Filtration Rate
+38.0,%,2012-09-03,FEV1/​FVC
+6.8,%,2012-09-03,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2012-09-03,Body Height
+113.24649373985994,kg,2012-09-03,Body Weight
+33.2958672883407,kg/m2,2012-09-03,Body Mass Index
+,,2012-09-03,Blood Pressure
+6.8,%,2012-09-03,Hemoglobin A1c/Hemoglobin.total in Blood
+114.0,mg/dL,2012-09-03,Glucose
+12.0,mg/dL,2012-09-03,Urea Nitrogen
+1.0,mg/dL,2012-09-03,Creatinine
+9.428536248791225,mg/dL,2012-09-03,Calcium
+143.0,mmol/L,2012-09-03,Sodium
+4.629985878506029,mmol/L,2012-09-03,Potassium
+104.0,mmol/L,2012-09-03,Chloride
+28.0,mmol/L,2012-09-03,Carbon Dioxide
+229.0,mg/dL,2012-09-03,Total Cholesterol
+159.0,mg/dL,2012-09-03,Triglycerides
+150.0,mg/dL,2012-09-03,Low Density Lipoprotein Cholesterol
+47.0,mg/dL,2012-09-03,High Density Lipoprotein Cholesterol
+5.0,mg/g,2012-09-03,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2012-09-03,Estimated Glomerular Filtration Rate
+32.0,%,2013-08-29,FEV1/​FVC
+6.8,%,2013-08-29,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2013-08-29,Body Height
+113.24649373985994,kg,2013-08-29,Body Weight
+33.2958672883407,kg/m2,2013-08-29,Body Mass Index
+,,2013-08-29,Blood Pressure
+6.8,%,2013-08-29,Hemoglobin A1c/Hemoglobin.total in Blood
+109.0,mg/dL,2013-08-29,Glucose
+18.0,mg/dL,2013-08-29,Urea Nitrogen
+1.0,mg/dL,2013-08-29,Creatinine
+8.765849648615,mg/dL,2013-08-29,Calcium
+142.0,mmol/L,2013-08-29,Sodium
+4.843029323573503,mmol/L,2013-08-29,Potassium
+111.0,mmol/L,2013-08-29,Chloride
+27.0,mmol/L,2013-08-29,Carbon Dioxide
+222.0,mg/dL,2013-08-29,Total Cholesterol
+162.0,mg/dL,2013-08-29,Triglycerides
+145.0,mg/dL,2013-08-29,Low Density Lipoprotein Cholesterol
+44.0,mg/dL,2013-08-29,High Density Lipoprotein Cholesterol
+17.0,mg/g,2013-08-29,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2013-08-29,Estimated Glomerular Filtration Rate
+27.0,%,2014-07-15,FEV1/​FVC
+6.8,%,2014-07-15,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2014-07-15,Body Height
+113.24649373985994,kg,2014-07-15,Body Weight
+33.2958672883407,kg/m2,2014-07-15,Body Mass Index
+,,2014-07-15,Blood Pressure
+6.8,%,2014-07-15,Hemoglobin A1c/Hemoglobin.total in Blood
+108.0,mg/dL,2014-07-15,Glucose
+13.0,mg/dL,2014-07-15,Urea Nitrogen
+1.0,mg/dL,2014-07-15,Creatinine
+9.118837222332406,mg/dL,2014-07-15,Calcium
+142.0,mmol/L,2014-07-15,Sodium
+5.090960745976218,mmol/L,2014-07-15,Potassium
+104.0,mmol/L,2014-07-15,Chloride
+29.0,mmol/L,2014-07-15,Carbon Dioxide
+205.0,mg/dL,2014-07-15,Total Cholesterol
+162.0,mg/dL,2014-07-15,Triglycerides
+125.0,mg/dL,2014-07-15,Low Density Lipoprotein Cholesterol
+47.0,mg/dL,2014-07-15,High Density Lipoprotein Cholesterol
+1.0,mg/g,2014-07-15,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2014-07-15,Estimated Glomerular Filtration Rate
+18.0,%,2015-08-11,FEV1/​FVC
+6.8,%,2015-08-11,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2015-08-11,Body Height
+113.24649373985994,kg,2015-08-11,Body Weight
+33.2958672883407,kg/m2,2015-08-11,Body Mass Index
+,,2015-08-11,Blood Pressure
+6.8,%,2015-08-11,Hemoglobin A1c/Hemoglobin.total in Blood
+104.0,mg/dL,2015-08-11,Glucose
+15.0,mg/dL,2015-08-11,Urea Nitrogen
+1.0,mg/dL,2015-08-11,Creatinine
+9.931321519683591,mg/dL,2015-08-11,Calcium
+141.0,mmol/L,2015-08-11,Sodium
+5.029094407978846,mmol/L,2015-08-11,Potassium
+103.0,mmol/L,2015-08-11,Chloride
+27.0,mmol/L,2015-08-11,Carbon Dioxide
+225.0,mg/dL,2015-08-11,Total Cholesterol
+157.0,mg/dL,2015-08-11,Triglycerides
+134.0,mg/dL,2015-08-11,Low Density Lipoprotein Cholesterol
+59.0,mg/dL,2015-08-11,High Density Lipoprotein Cholesterol
+12.0,mg/g,2015-08-11,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2015-08-11,Estimated Glomerular Filtration Rate
+20.0,%,2016-09-21,FEV1/​FVC
+6.8,%,2016-09-21,Hemoglobin A1c/Hemoglobin.total in Blood
+184.42390619105703,cm,2016-09-21,Body Height
+113.24649373985994,kg,2016-09-21,Body Weight
+33.2958672883407,kg/m2,2016-09-21,Body Mass Index
+,,2016-09-21,Blood Pressure
+6.8,%,2016-09-21,Hemoglobin A1c/Hemoglobin.total in Blood
+123.0,mg/dL,2016-09-21,Glucose
+14.0,mg/dL,2016-09-21,Urea Nitrogen
+1.0,mg/dL,2016-09-21,Creatinine
+8.602166818586303,mg/dL,2016-09-21,Calcium
+140.0,mmol/L,2016-09-21,Sodium
+4.305126086147105,mmol/L,2016-09-21,Potassium
+101.0,mmol/L,2016-09-21,Chloride
+20.0,mmol/L,2016-09-21,Carbon Dioxide
+205.0,mg/dL,2016-09-21,Total Cholesterol
+188.0,mg/dL,2016-09-21,Triglycerides
+126.0,mg/dL,2016-09-21,Low Density Lipoprotein Cholesterol
+41.0,mg/dL,2016-09-21,High Density Lipoprotein Cholesterol
+7.0,mg/g,2016-09-21,Microalbumin Creatine Ratio
+0.0,mL/min/{1.73_m2},2016-09-21,Estimated Glomerular Filtration Rate
