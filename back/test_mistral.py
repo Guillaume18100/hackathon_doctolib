@@ -1,11 +1,17 @@
 from mistralai import Mistral
 from dotenv import load_dotenv
 import os
+import glob
+import orjson
+import logging
 import pandas as pd
 from pydantic import BaseModel
 from typing import List
 
 load_dotenv()
+import logging
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
 api_mistral = os.getenv("MISTRAL_API")
 
@@ -32,22 +38,31 @@ def load_patient_data(file_path: str) -> str:
     data = pd.read_csv(file_path)
     return data.to_json(orient="records")
 
-def create_chat_messages(observations_data_json: str, lifestyle_data_json: str) -> list:
+def get_all_csv_files(directory: str) -> list:
+    """Recursively finds all CSV files in the given directory."""
+    return glob.glob(os.path.join(directory, "**", "*.csv"), recursive=True)
+
+def create_chat_messages(patient_data: list) -> list:
     """Creates chat messages with system instructions and patient data."""
     return [
         {
             "role": "system",
-            "content": "You are a medical AI assistant specialized with calculating the risk of Type 2 diabetes using the following patient information."
+            "content": "You are a medical AI assistant specialized in calculating the risk of Type 2 diabetes using the provided patient information."
         },
         {
             "role": "user",
             "content": f"""### Instructions
     
-    I will provide you with observations data for one patient. Please follow the methodology provided below and output the diabetes risk probability (0-100%). Provide a brief explanation of each component, severity level and advise to reduce the risk.
+    I will provide you with observations data for one patient. Please follow the methodology provided below and output the diabetes risk probability (0-100%). Provide a brief explanation of each component and severity level. Set a theraputic goal for the patient to reduce a given risk. Provide both patient and doctor with advise to reduce the risk. The advise should contain exact actions to perform enriched with numbers of potential improvement of a given component (like "A balanced diet could reduce cholesterol level by 40%").
 
-    Be as specific as possible in terms of advise: a concrete action for the patient in terms of lifestyle, a concrete medication to prescribe, a concrete analysis to perform.
+    Be as specific as possible in terms of advise: 
+        - for the doctor: a concrete action for the patient in terms of lifestyle
+        - for the patient: a concrete medication to prescribe for a psecific purpose, a concrete analysis to perform for a psecific purpose.
     
-    If the patient data is missing on some component, mark `severity_level` as Unknown, alert the healcare professional about the necessity to fill in the missing info, through analisys performance, treatement, or questionnaire. The advise should contain exact actions enriched with numbers of potential improvement of a given component (like "A balanced diet could reduce cholesterol level by 40%").
+    If the patient data is missing on some component, mark `severity_level` as Unknown, alert the healcare professional about the necessity to fill in the missing info through 
+        - analisys presciption
+        - treatement prescription
+        - questionnaire for lifestyle to fill in. 
 
     ###Methodology by component
 
@@ -88,40 +103,66 @@ def create_chat_messages(observations_data_json: str, lifestyle_data_json: str) 
         - Diet: High sugar, high fat, and low fiber intake increases risk. A poor diet can increase risk by 5-15%.
         - Smoking: Smokers have an increased risk (by 10-20%).
         - Alcohol: High alcohol intake can also contribute to risk.
-    
+
     9. Sleep and Stress:
 
         - Poor sleep (< 6 hours per night) and high stress levels contribute to higher risk due to metabolic dysfunction, with an increase of up to 10%.
-    
-    ### Patient data: 
 
-    Medical observations: 
-    {observations_data_json}
+    ### Patient data:
 
-    Lifestyle data: 
-    {observations_data_json}
-    
-    ### Potential primary risks:"""
+    {patient_data}
+
+    ### Potential Primary Risks:"""
         },
     ]
 
-def get_chat_response(client, model, messages, response_format, max_tokens=2048, temperature=0.0):
+def get_chat_response(client, model, messages, response_format, max_tokens=4096, temperature=0.0):
     """Sends a chat request and retrieves the response."""
-    return client.chat.parse(
+    if response_format == "text":
+        return client.chat.complete(
+            model=model,
+            messages=messages,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+    else:
+        return client.chat.parse(
+            model=model,
+            messages=messages,
+            response_format=response_format,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+
+
+def summarize_list(items: list, summary_type: str) -> str:
+    """Calls the LLM to summarize a list of advices."""
+    summary_messages = [
+        {"role": "system", "content": f"You are an AI specialized in summarizing {summary_type}."},
+        {"role": "user", "content": f"Summarize the following {summary_type} list in a concise wa, with no introduction:\n\n" + "\n".join(items)}
+    ]
+
+    summary_response = get_chat_response(
+        client=client,
         model=model,
-        messages=messages,
-        response_format=response_format,
-        max_tokens=max_tokens,
-        temperature=temperature
+        messages=summary_messages,
+        response_format="text"
     )
 
-def main(observations_data, lifestyle_data):
-    """Main function to execute the workflow."""
-    observations_data_json = load_patient_data(observations_data)
-    lifestyle_data_json = load_patient_data(lifestyle_data)
+    return summary_response.choices[0].message.content
 
-    messages = create_chat_messages(observations_data_json, lifestyle_data_json)
+def general_llm_call(patient_directory: str):
+    """General function to execute the workflow."""
+    patient_data_files = get_all_csv_files(patient_directory)
+    all_data = []
 
+    for data_path in patient_data_files:
+        df_json = load_patient_data(data_path)
+        all_data.append(df_json)
+
+    messages = create_chat_messages(all_data)
+
+    logging.info("Analyzing patient data...")
     chat_response = get_chat_response(
         client=client,
         model=model,
@@ -129,8 +170,30 @@ def main(observations_data, lifestyle_data):
         response_format=RisksResponse
     )
 
-    print(chat_response.choices[0].message.content)
+    # Extract initial results
+    result = chat_response.choices[0].message.content
+    result = orjson.loads(result)
+    result["sources"] = patient_data_files
+
+    # Extract doctor and patient advice lists
+    doctor_advices = [risk["doctor_advise"] for risk in result["risks"] if risk["doctor_advise"]]
+    patient_advices = [risk["patient_advise"] for risk in result["risks"] if risk["patient_advise"]]
+
+    # Summarize doctor and patient advice
+    logging.info("Preparing recommendations for doctors...")
+    doctor_summary = summarize_list(doctor_advices, "doctor advice") if doctor_advices else "No doctor advice available."
+    logging.info("Preparing recommendations for patients...")
+    patient_summary = summarize_list(patient_advices, "patient advice") if patient_advices else "No patient advice available."
+
+    # Final output
+    final_output = {
+        "initial_response": result,
+        "doctor_summary": doctor_summary,
+        "patient_summary": patient_summary
+    }
+
+    logging.info(orjson.dumps(final_output, option=orjson.OPT_INDENT_2).decode())
 
 if __name__ == "__main__":
-    main("data/observations/patient_1.csv", "metadata/patient_1.csv")
-    
+    patient_data = "data/patient_1"
+    general_llm_call(patient_data)
