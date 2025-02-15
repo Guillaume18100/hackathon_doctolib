@@ -35,47 +35,96 @@
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Patient List</h2>
         <ul id="patientList" class="space-y-2">
-          <!-- Example patients with directories. 
-               Adjust or add more as needed. -->
+          <!-- Existing patients -->
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{
-                "name": "Patient 0", 
-                "age": 42,
-                "directory": "data/patient_0"
-              }'>
-            Patient 0
-          </li>
+          data-patient='{
+            "name": "Patient 0", 
+            "age": 42,
+            "directory": "data/patient_0"
+          }'>Patient 0</li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{
-                "name": "Patient 1", 
-                "age": 50,
-                "directory": "data/patient_1"
-              }'>
-            Patient 1
-          </li>
+          data-patient='{
+            "name": "Patient 1", 
+            "age": 50,
+            "directory": "data/patient_1"
+          }'>Patient 1</li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{
-                "name": "Patient 2", 
-                "age": 60,
-                "directory": "data/patient_2"
-              }'>
-            Patient 2
-          </li>
+          data-patient='{
+            "name": "Patient 2", 
+            "age": 60,
+            "directory": "data/patient_2"
+          }'>Patient 2</li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{
-                "name": "Patient 3", 
-                "age": 38,
-                "directory": "data/patient_3"
-              }'>
-            Patient 3
-          </li>
+          data-patient='{
+            "name": "Patient 3", 
+            "age": 38,
+            "directory": "data/patient_3"
+          }'>Patient 3</li>
+          
+          <!-- New patients -->
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 4",
+            "age": 45,
+            "directory": "data/patient_4"
+          }'>Patient 4</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 5",
+            "age": 55,
+            "directory": "data/patient_5"
+          }'>Patient 5</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 6",
+            "age": 39,
+            "directory": "data/patient_6"
+          }'>Patient 6</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 7",
+            "age": 70,
+            "directory": "data/patient_7"
+          }'>Patient 7</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 8",
+            "age": 52,
+            "directory": "data/patient_8"
+          }'>Patient 8</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 9",
+            "age": 64,
+            "directory": "data/patient_9"
+          }'>Patient 9</li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+          data-patient='{
+            "name": "Patient 10",
+            "age": 49,
+            "directory": "data/patient_10"
+          }'>Patient 10</li>
         </ul>
       </div>
 
       <!-- Upload New Files -->
       <div class="glass-panel rounded-xl p-4">
-        <h2 class="text-xl font-bold text-[#05066D] mb-2">Upload New Files</h2>
-        <input type="file" class="w-full p-2 border border-[#E1EAFE] rounded-lg" multiple>
+        <h2 class="text-xl font-bold text-[#05066D] mb-4">Upload New Files</h2>
+        <div id="uploadContainer" class="upload-container relative cursor-pointer rounded-lg p-6 text-center border-2 border-dashed border-[#05066D]/20 hover:border-[#05066D]/40 transition-colors">
+          <input type="file" id="fileInput" class="hidden" multiple>
+          <div class="space-y-4">
+            <svg class="w-12 h-12 mx-auto text-[#05066D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <div class="space-y-1">
+              <button class="px-6 py-2 rounded-lg font-semibold bg-[#05066D] text-white hover:bg-[#05066D]/90 transition-colors">
+                Select Files
+              </button>
+              <p class="text-sm text-[#05066D]/80 mt-2">or drag and drop files here</p>
+            </div>
+          </div>
+        </div>
+        <div id="fileList" class="mt-4 space-y-2"></div>
       </div>
     </aside>
     
