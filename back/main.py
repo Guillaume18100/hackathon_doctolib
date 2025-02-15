@@ -1,107 +1,173 @@
-import re
-from openai import OpenAI
-from pydantic import BaseModel
-from fastapi import FastAPI
+import os
+import logging
+import pandas as pd
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from pydantic import BaseModel
+from typing import List
+from dotenv import load_dotenv
 
+# Load environment variables
+load_dotenv()
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+# Import your real Mistral logic from test_mistral.py
+# e.g. from test_mistral import general_llm_call
+# Or if you prefer, just copy-paste the code from test_mistral.py directly here.
+
+# ------------------------------------------------------------------
+# Directly copy the relevant code from test_mistral.py for clarity:
+# ------------------------------------------------------------------
+from mistralai import Mistral
+import glob
+import orjson
+
+api_mistral = os.getenv("MISTRAL_API")
+model = "mistral-large-latest"
+
+client = Mistral(api_key=api_mistral)
+
+def load_patient_data(file_path: str) -> str:
+    data = pd.read_csv(file_path)
+    return data.to_json(orient="records")
+
+def get_all_csv_files(directory: str) -> list:
+    return glob.glob(os.path.join(directory, "**", "*.csv"), recursive=True)
+
+def create_chat_messages(patient_data: list) -> list:
+    return [
+        {
+            "role": "system",
+            "content": "You are a medical AI assistant specialized in calculating the risk of Type 2 diabetes using the provided patient information."
+        },
+        {
+            "role": "user",
+            "content": f"""### Instructions
+I will provide you with observations data for one patient. Please follow the methodology...
+[the rest of your instructions here...]
+### Patient data:
+{patient_data}
+### Potential Primary Risks:"""
+        },
+    ]
+
+class Risk(BaseModel):
+    risk: str
+    severity_level: str
+    therapeutic_goal: str
+    doctor_advise: str
+    patient_advise: str
+    observations: str
+
+class RisksResponse(BaseModel):
+    risks: List[Risk]
+
+def get_chat_response(client, model, messages, response_format, max_tokens=4096, temperature=0.0):
+    if response_format == "text":
+        return client.chat.complete(
+            model=model,
+            messages=messages,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+    else:
+        return client.chat.parse(
+            model=model,
+            messages=messages,
+            response_format=response_format,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+
+def summarize_list(items: list, summary_type: str) -> str:
+    summary_messages = [
+        {"role": "system", "content": f"You are an AI specialized in summarizing {summary_type}."},
+        {"role": "user", "content": f"Summarize the following {summary_type} list in a concise way, with no introduction:\n\n" + "\n".join(items)}
+    ]
+
+    summary_response = get_chat_response(
+        client=client,
+        model=model,
+        messages=summary_messages,
+        response_format="text"
+    )
+    return summary_response.choices[0].message.content
+
+def general_llm_call(patient_directory: str):
+    """Real function that calls Mistral with CSV data for the given directory."""
+    patient_data_files = get_all_csv_files(patient_directory)
+    all_data = []
+
+    for data_path in patient_data_files:
+        df_json = load_patient_data(data_path)
+        all_data.append(df_json)
+
+    messages = create_chat_messages(all_data)
+    logging.info("Analyzing patient data with Mistral...")
+
+    chat_response = get_chat_response(
+        client=client,
+        model=model,
+        messages=messages,
+        response_format=RisksResponse
+    )
+
+    # Convert to Python object
+    result = chat_response.choices[0].message.content
+    result = orjson.loads(result)
+
+    # Add the file paths as "sources"
+    result["sources"] = patient_data_files
+
+    # Summaries
+    doctor_advices = [risk["doctor_advise"] for risk in result["risks"] if risk["doctor_advise"]]
+    patient_advices = [risk["patient_advise"] for risk in result["risks"] if risk["patient_advise"]]
+
+    doctor_summary = summarize_list(doctor_advices, "doctor advice") if doctor_advices else "No doctor advice available."
+    patient_summary = summarize_list(patient_advices, "patient advice") if patient_advices else "No patient advice available."
+
+    final_output = {
+        "initial_response": result,
+        "doctor_summary": doctor_summary,
+        "patient_summary": patient_summary
+    }
+    logging.info(orjson.dumps(final_output, option=orjson.OPT_INDENT_2).decode())
+    return final_output
+# ------------------------------------------------------------------
+
+# Now we set up FastAPI
 app = FastAPI()
 
-# Configure CORS middleware to allow requests from your front end.
-origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://127.0.0.1",
-    "http://127.0.0.1:8000"
-    # Add any other origins you might use
-]
+class AnalyzeRequest(BaseModel):
+    directory: str
 
+# CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Relax this for local testing
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Set your preferred model and API key
-MODEL = "deepseek-r1"  # Adjust if needed
-API_KEY = "57033301-8c34-4cae-b78b-fc025a54fda7"  # Replace with your actual Scaleway API key
-
-client = OpenAI(
-    base_url="https://api.scaleway.ai/v1",
-    api_key=API_KEY,
-)
-
-class ChatPayload(BaseModel):
-    message: str
-
-def remove_chain_of_thought(text: str) -> str:
+@app.post("/analyze")
+def analyze_patient(data: AnalyzeRequest):
     """
-    Removes any text between <think> and </think> tags, including the tags themselves.
+    The front-end will call POST /analyze with { "directory": "data/patient_X" }.
+    We'll pass that directory to the real general_llm_call above.
     """
-    return re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+    try:
+        result = general_llm_call(data.directory)
+        return result
+    except Exception as e:
+        logging.error(f"Error analyzing patient data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-# Endpoint now returns plain text.
-@app.post("/chat", response_class=PlainTextResponse)
-def chat_endpoint(payload: ChatPayload):
-    transcript = payload.message
-    if not transcript:
-        return "Error: No transcript provided."
-    
-    response_text = get_pathology_response(transcript)
-    filtered_text = remove_chain_of_thought(response_text)
-    return filtered_text
-
-def get_pathology_response(transcript: str) -> str:
-    """
-    Sends the pathology transcript to the AI and returns a structured plain text response.
-    The system message instructs the AI to output only the final structured plain text response,
-    ignoring any chain-of-thought or internal reasoning (including text between <think> tags).
-    """
-    result = client.chat.completions.create(
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "You are an AI assistant specialized in pathology. The following is a pathology report transcript.\n\n"
-                    "Please provide a structured, easy-to-read plain text response with the following sections:\n\n"
-                    "--------------------------------------------------\n"
-                    "CASE SUMMARY\n"
-                    "--------------------------------------------------\n"
-                    "DIFFERENTIAL DIAGNOSIS (list each diagnosis as a bullet point using '-' for bullets)\n"
-                    "--------------------------------------------------\n"
-                    "RECOMMENDED TESTS (list each test as a bullet point using '-' for bullets)\n"
-                    "--------------------------------------------------\n"
-                    "ADDITIONAL NOTES\n"
-                    "--------------------------------------------------\n\n"
-                    "Ensure each section is clearly separated and formatted for readability. "
-                    "Do not use any markdown formatting symbols (such as asterisks or underscores). "
-                    "Ignore any internal chain-of-thought or reasoning text, including anything enclosed in <think> tags. "
-                    "Output only the final structured plain text response."
-                ),
-            },
-            {
-                "role": "user",
-                "content": transcript,
-            },
-        ],
-        model=MODEL,
-    )
-    return result.choices[0].message.content
+@app.get("/")
+def root():
+    return {"message": "Welcome to PathAI backend with real Mistral logic!"}
 
 if __name__ == "__main__":
-    print("=== Pathology Chatbot ===")
-    print("Enter a pathology report transcript below (type 'exit' to quit):\n")
-    while True:
-        transcript = input("Transcript: ")
-        if transcript.lower().strip() == "exit":
-            break
-        try:
-            response_text = get_pathology_response(transcript)
-            filtered_text = remove_chain_of_thought(response_text)
-            print("\nAI Response:\n")
-            print(filtered_text)
-        except Exception as e:
-            print("An error occurred:", e)
-        print("\n--------------------------------\n")
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

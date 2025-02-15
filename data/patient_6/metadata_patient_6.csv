@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"Intermittent migraines"
+Medical & Surgical History,Past surgeries,"Tonsillectomy at age 8"
+Medical & Surgical History,Previous diagnoses,"Mild depression (past)"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"Uncle: heart attack at 67"
+Family History,Metabolic disorders,"None"
+Family History,Neurological diseases,"None"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"Grandmother: depression"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"None"
+Allergies & Sensitivities,Environmental allergies,"None"
+
+Lifestyle Factors,Tobacco use,"Quit 2 years ago (was ~5 cigs/day)"
+Lifestyle Factors,Alcohol consumption,"Moderate (2 drinks/week)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"Balanced with occasional fast-food"
+Lifestyle Factors,Physical activity level,"Walks daily"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of PCOS,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not applicable (male)"
+
+Biometric Data,Height,"172 cm"
+Biometric Data,Weight,"79 kg"
+Biometric Data,Blood pressure,"132/88 mmHg"
+Biometric Data,Heart rate,"80 bpm"
+
+Social & Environmental Factors,Occupational risks,"Nurse, shift work stress"
+Social & Environmental Factors,Living conditions,"Urban apartment"
+Social & Environmental Factors,Access to healthcare,"Insurance, irregular visits"

@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"Mild eczema"
+Medical & Surgical History,Past surgeries,"C-section (once)"
+Medical & Surgical History,Previous diagnoses,"None"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"No known issues"
+Family History,Metabolic disorders,"None"
+Family History,Neurological diseases,"Grandfather: Parkinson's"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"Cousin: bipolar disorder"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"None"
+Allergies & Sensitivities,Environmental allergies,"None"
+
+Lifestyle Factors,Tobacco use,"None"
+Lifestyle Factors,Alcohol consumption,"Social (2 drinks/week)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"Balanced, occasional sweets"
+Lifestyle Factors,Physical activity level,"Swimming 1x/week"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Regular cycle"
+Medical Gynecological & Obstetrical History,History of PCOS,"No"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"1 pregnancy, no complications"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not in menopause"
+
+Biometric Data,Height,"160 cm"
+Biometric Data,Weight,"58 kg"
+Biometric Data,Blood pressure,"110/70 mmHg"
+Biometric Data,Heart rate,"68 bpm"
+
+Social & Environmental Factors,Occupational risks,"Part-time cashier"
+Social & Environmental Factors,Living conditions,"Urban area, moderate pollution"
+Social & Environmental Factors,Access to healthcare,"Public coverage, minimal visits"

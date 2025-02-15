@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"Acid reflux"
+Medical & Surgical History,Past surgeries,"Appendectomy at age 22"
+Medical & Surgical History,Previous diagnoses,"None"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"None"
+Family History,Metabolic disorders,"Mother: hypothyroidism"
+Family History,Neurological diseases,"None"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"None"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"None"
+Allergies & Sensitivities,Environmental allergies,"None"
+
+Lifestyle Factors,Tobacco use,"None"
+Lifestyle Factors,Alcohol consumption,"Rare (1 drink/month)"
+Lifestyle Factors,Drug use,"Occasional cannabis"
+Lifestyle Factors,Dietary habits,"High sugar intake (desserts, soda)"
+Lifestyle Factors,Physical activity level,"Occasional hikes"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of PCOS,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not applicable (male)"
+
+Biometric Data,Height,"177 cm"
+Biometric Data,Weight,"90 kg"
+Biometric Data,Blood pressure,"130/86 mmHg"
+Biometric Data,Heart rate,"85 bpm"
+
+Social & Environmental Factors,Occupational risks,"Construction worker, physical labor"
+Social & Environmental Factors,Living conditions,"Rural area, clean air"
+Social & Environmental Factors,Access to healthcare,"Insurance, rarely visits doctor"
