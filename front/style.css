@@ -1,61 +1,35 @@
 body {
-    font-family: 'Manrope', sans-serif;
-    background-color: #FDFDFD;
-  }
-  
-  .glass-panel {
-    background: rgba(253, 253, 253, 0.9);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(225, 234, 254, 0.3);
-    box-shadow: 0 8px 32px rgba(5, 6, 109, 0.05);
-  }
-  
-  .hidden {
-    display: none !important;
-  }
-  
-  .risk-badge {
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-  }
-  
-  /* Color-coded risk levels */
-  .risk-low {
-    background-color: #A7F3D0;
-    color: #065F46;
-  }
-  .risk-moderate {
-    background-color: #FCD34D;
-    color: #92400E;
-  }
-  .risk-high {
-    background-color: #FCA5A5;
-    color: #7F1D1D;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    text-align: left;
-  }
-  th {
-    background-color: #E1EAFE;
-    color: #05066D;
-  }
-  
-  .ai-risk-item {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .ai-risk-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
-  
+  font-family: 'Manrope', sans-serif;
+  background-color: #FDFDFD;
+}
+
+.glass-panel {
+  background: rgba(253, 253, 253, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(225, 234, 254, 0.3);
+  box-shadow: 0 8px 32px rgba(5, 6, 109, 0.05);
+}
+
+.hidden {
+  display: none !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+th {
+  background-color: #E1EAFE;
+  color: #05066D;
+}
+
+/* Simple bullet styling */
+ul.list-disc {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}

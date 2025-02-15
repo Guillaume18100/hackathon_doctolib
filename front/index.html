@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PreventIA </title>
+  <title>PathAI - Patient Dashboard</title>
   <!-- Tailwind CSS from CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts -->
@@ -14,14 +14,13 @@
 <body>
   <!-- Header -->
   <header class="bg-[#E1EAFE] text-[#05066D] p-4 shadow-md sticky top-0 z-10">
-    <h1 class="text-2xl font-bold">PreventIA - Patient Risk Assessment</h1>
+    <h1 class="text-2xl font-bold">PathAI - Patient Dashboard</h1>
   </header>
   
   <!-- Main Layout -->
   <div class="flex">
     <!-- Left Sidebar: Search, Patient List, Upload Files -->
     <aside class="w-1/4 p-4 border-r border-gray-300 space-y-6">
-      <!-- Search Patients -->
       <div>
         <input
           type="text"
@@ -30,116 +29,38 @@
           class="w-full p-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#05066D]"
         />
       </div>
-
-      <!-- Patient List -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Patient List</h2>
         <ul id="patientList" class="space-y-2">
-          <!-- Existing patients -->
+          <!-- Example patients -->
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 0", 
-            "age": 42,
-            "directory": "data/patient_0"
-          }'>Patient 0</li>
+              data-patient='{"name": "Patient 0", "age": 42, "directory": "data/patient_0"}'>
+            Patient 0
+          </li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 1", 
-            "age": 50,
-            "directory": "data/patient_1"
-          }'>Patient 1</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 2", 
-            "age": 60,
-            "directory": "data/patient_2"
-          }'>Patient 2</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 3", 
-            "age": 38,
-            "directory": "data/patient_3"
-          }'>Patient 3</li>
-          
-          <!-- New patients -->
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 4",
-            "age": 45,
-            "directory": "data/patient_4"
-          }'>Patient 4</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 5",
-            "age": 55,
-            "directory": "data/patient_5"
-          }'>Patient 5</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 6",
-            "age": 39,
-            "directory": "data/patient_6"
-          }'>Patient 6</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 7",
-            "age": 70,
-            "directory": "data/patient_7"
-          }'>Patient 7</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 8",
-            "age": 52,
-            "directory": "data/patient_8"
-          }'>Patient 8</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 9",
-            "age": 64,
-            "directory": "data/patient_9"
-          }'>Patient 9</li>
-          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-          data-patient='{
-            "name": "Patient 10",
-            "age": 49,
-            "directory": "data/patient_10"
-          }'>Patient 10</li>
+              data-patient='{"name": "Patient 1", "age": 50, "directory": "data/patient_1"}'>
+            Patient 1
+          </li>
         </ul>
       </div>
-
-      <!-- Upload New Files -->
       <div class="glass-panel rounded-xl p-4">
-        <h2 class="text-xl font-bold text-[#05066D] mb-4">Upload New Files</h2>
-        <div id="uploadContainer" class="upload-container relative cursor-pointer rounded-lg p-6 text-center border-2 border-dashed border-[#05066D]/20 hover:border-[#05066D]/40 transition-colors">
-          <input type="file" id="fileInput" class="hidden" multiple>
-          <div class="space-y-4">
-            <svg class="w-12 h-12 mx-auto text-[#05066D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-            </svg>
-            <div class="space-y-1">
-              <button class="px-6 py-2 rounded-lg font-semibold bg-[#05066D] text-white hover:bg-[#05066D]/90 transition-colors">
-                Select Files
-              </button>
-              <p class="text-sm text-[#05066D]/80 mt-2">or drag and drop files here</p>
-            </div>
-          </div>
-        </div>
-        <div id="fileList" class="mt-4 space-y-2"></div>
+        <h2 class="text-xl font-bold text-[#05066D] mb-2">Upload New Files</h2>
+        <input type="file" class="w-full p-2 border border-[#E1EAFE] rounded-lg" multiple>
       </div>
     </aside>
     
-    <!-- Center Panel: Multi-Condition Overview & Interpretation -->
+    <!-- Center Panel: Condition Tables Only -->
     <main class="w-1/2 p-4">
-      <!-- Patient Overview -->
       <div id="patientOverview" class="glass-panel p-6 rounded shadow-md mb-4">
         <h2 class="text-2xl font-bold mb-4" id="patientNameTitle">Patient Overview</h2>
         <p>Select a patient from the list to load their AI analysis.</p>
       </div>
-
-      <!-- Tables for Diabetes, Cardiovascular, Hypertension -->
-      <div class="glass-panel p-4 mb-4" id="conditionTables" hidden>
-        <div>
-          <h3 class="text-xl font-semibold text-[#05066D] mb-2">Diabetes</h3>
+      <div class="glass-panel p-4" id="conditionTables" hidden>
+        <h2 class="text-xl font-bold text-[#05066D] mb-4">Condition Tables</h2>
+        
+        <!-- Diabetes Table -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-[#05066D] mb-2">Diabetes</h3>
           <table class="min-w-full border-collapse mt-2" id="diabetesTable">
             <thead>
               <tr>
@@ -153,9 +74,10 @@
             </tbody>
           </table>
         </div>
-        
-        <div class="mt-6">
-          <h3 class="text-xl font-semibold text-[#05066D] mb-2">Cardiovascular</h3>
+
+        <!-- Cardiovascular Table (no data) -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-[#05066D] mb-2">Cardiovascular</h3>
           <table class="min-w-full border-collapse mt-2" id="cardioTable">
             <thead>
               <tr>
@@ -165,13 +87,18 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Filled dynamically -->
+              <tr>
+                <td class="border px-4 py-2">No data</td>
+                <td class="border px-4 py-2">--</td>
+                <td class="border px-4 py-2">--</td>
+              </tr>
             </tbody>
           </table>
         </div>
-        
-        <div class="mt-6">
-          <h3 class="text-xl font-semibold text-[#05066D] mb-2">Hypertension</h3>
+
+        <!-- Hypertension Table (no data) -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold text-[#05066D] mb-2">Hypertension</h3>
           <table class="min-w-full border-collapse mt-2" id="hyperTable">
             <thead>
               <tr>
@@ -181,36 +108,49 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Filled dynamically -->
+              <tr>
+                <td class="border px-4 py-2">No data</td>
+                <td class="border px-4 py-2">--</td>
+                <td class="border px-4 py-2">--</td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-      <!-- AI Results -->
-      <div id="analysisResult" class="glass-panel p-4 mt-4 hidden"></div>
     </main>
     
-    <!-- Right Sidebar: Test Propositions, Lifestyle, AI Opinion Sources, Additional Info -->
+    <!-- Right Sidebar: Summaries, Test Propositions, AI Sources -->
     <aside id="rightSidebar" class="w-1/4 p-4 border-l border-gray-300 space-y-6">
+      <!-- Test Propositions -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Test Propositions</h2>
         <div id="testProps">
           <p>Select a patient to view recommendations.</p>
         </div>
       </div>
+
+      <!-- Doctor & Patient Summaries (No raw JSON) -->
       <div class="glass-panel rounded-xl p-4">
-        <h2 class="text-xl font-bold text-[#05066D] mb-4">Lifestyle Recommendations</h2>
-        <div id="lifestyleRecs">
-          <p>Select a patient to view recommendations.</p>
+        <h2 class="text-xl font-bold text-[#05066D] mb-4">AI Analysis Summaries</h2>
+        <div id="doctorSummaryPanel" class="mb-4">
+          <h3 class="font-semibold text-[#05066D]">Doctor Summary:</h3>
+          <div id="doctorSummaryContainer"></div>
+        </div>
+        <div id="patientSummaryPanel" class="mb-4">
+          <h3 class="font-semibold text-[#05066D]">Patient Summary:</h3>
+          <div id="patientSummaryContainer"></div>
         </div>
       </div>
+
+      <!-- AI Opinion Sources -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">AI Opinion Sources</h2>
         <div id="aiSources">
           <p>Select a patient to view source documents.</p>
         </div>
       </div>
+
+      <!-- Additional Info -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Additional Information</h2>
         <p class="text-[#05066D]">
