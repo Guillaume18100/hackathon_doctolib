@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"None"
+Medical & Surgical History,Past surgeries,"None"
+Medical & Surgical History,Previous diagnoses,"Mono at 19"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"Grandmother: hypertension"
+Family History,Metabolic disorders,"None"
+Family History,Neurological diseases,"None"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"None"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"Strawberries"
+Allergies & Sensitivities,Environmental allergies,"Pollen"
+
+Lifestyle Factors,Tobacco use,"None"
+Lifestyle Factors,Alcohol consumption,"None"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"Balanced"
+Lifestyle Factors,Physical activity level,"Gym 1x/month"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Irregular cycle"
+Medical Gynecological & Obstetrical History,History of PCOS,"No"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"2 pregnancies, no complications"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Perimenopause, no HRT"
+
+Biometric Data,Height,"162 cm"
+Biometric Data,Weight,"60 kg"
+Biometric Data,Blood pressure,"118/72 mmHg"
+Biometric Data,Heart rate,"74 bpm"
+
+Social & Environmental Factors,Occupational risks,"Accountant, strict deadlines"
+Social & Environmental Factors,Living conditions,"Suburban condo"
+Social & Environmental Factors,Access to healthcare,"Public system, occasional checkups"

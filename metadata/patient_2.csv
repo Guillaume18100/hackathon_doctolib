@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"Mild asthma"
+Medical & Surgical History,Past surgeries,"None"
+Medical & Surgical History,Previous diagnoses,"Childhood pneumonia"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"Grandfather: stroke at 78"
+Family History,Metabolic disorders,"None"
+Family History,Neurological diseases,"No known history"
+Family History,Autoimmune diseases,"Aunt: rheumatoid arthritis"
+Family History,Mental health conditions,"None"
+
+Allergies & Sensitivities,Medication allergies,"Penicillin"
+Allergies & Sensitivities,Food allergies,"Peanuts"
+Allergies & Sensitivities,Environmental allergies,"Dust mites"
+
+Lifestyle Factors,Tobacco use,"Never smoked"
+Lifestyle Factors,Alcohol consumption,"Occasional wine (1-2 glasses/month)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"Balanced diet, home-cooked meals"
+Lifestyle Factors,Physical activity level,"Jogging 3x/week"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Regular cycle"
+Medical Gynecological & Obstetrical History,History of PCOS,"No"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"No pregnancies"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not in menopause"
+
+Biometric Data,Height,"165 cm"
+Biometric Data,Weight,"60 kg"
+Biometric Data,Blood pressure,"115/75 mmHg"
+Biometric Data,Heart rate,"72 bpm"
+
+Social & Environmental Factors,Occupational risks,"Freelance writer, flexible hours"
+Social & Environmental Factors,Living conditions,"Suburban, low pollution"
+Social & Environmental Factors,Access to healthcare,"Public healthcare, regular visits"

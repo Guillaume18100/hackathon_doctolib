@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"Pre-hypertension (not on meds)"
+Medical & Surgical History,Past surgeries,"None"
+Medical & Surgical History,Previous diagnoses,"Allergic rhinitis"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"Father: borderline cholesterol"
+Family History,Metabolic disorders,"Grandfather: type 2 diabetes"
+Family History,Neurological diseases,"No known issues"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"None"
+
+Allergies & Sensitivities,Medication allergies,"NSAIDs"
+Allergies & Sensitivities,Food allergies,"None"
+Allergies & Sensitivities,Environmental allergies,"None"
+
+Lifestyle Factors,Tobacco use,"None"
+Lifestyle Factors,Alcohol consumption,"Occasional (1 drink/week)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"High protein, moderate vegetables"
+Lifestyle Factors,Physical activity level,"Cycling on weekends"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of PCOS,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not applicable (male)"
+
+Biometric Data,Height,"183 cm"
+Biometric Data,Weight,"85 kg"
+Biometric Data,Blood pressure,"135/90 mmHg"
+Biometric Data,Heart rate,"76 bpm"
+
+Social & Environmental Factors,Occupational risks,"Engineer, occasional travel"
+Social & Environmental Factors,Living conditions,"Suburban house"
+Social & Environmental Factors,Access to healthcare,"Private insurance, regular checkups"

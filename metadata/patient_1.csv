@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"No currently diagnosed chronic conditions; occasional borderline high blood pressure noted"
+Medical & Surgical History,Past surgeries,"Appendectomy at age 17"
+Medical & Surgical History,Previous diagnoses,"None"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"Father developed mild hypertension in his late 50s"
+Family History,Metabolic disorders,"Maternal grandmother had type 2 diabetes"
+Family History,Neurological diseases,"No known family history"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"Uncle with mild depression"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"Mild shellfish allergy"
+Allergies & Sensitivities,Environmental allergies,"Seasonal pollen allergy"
+
+Lifestyle Factors,Tobacco use,"Occasional smoker (~3 cigarettes/day), started 2 years ago"
+Lifestyle Factors,Alcohol consumption,"Social drinking (2-3 drinks/week)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"Moderate intake of red meat/processed foods, limited fruits/vegetables"
+Lifestyle Factors,Physical activity level,"Light exercise once a week (jogging/cycling)"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Not applicable (male patient)"
+Medical Gynecological & Obstetrical History,History of PCOS,"Not applicable (male patient)"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"Not applicable (male patient)"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not applicable (male patient)"
+
+Biometric Data,Height,"178 cm"
+Biometric Data,Weight,"86 kg"
+Biometric Data,Blood pressure,"Average ~130/85 mmHg"
+Biometric Data,Heart rate,"Resting ~82 bpm"
+
+Social & Environmental Factors,Occupational risks,"Office job with moderate stress (deadlines)"
+Social & Environmental Factors,Living conditions,"Urban area with moderate air pollution"
+Social & Environmental Factors,Access to healthcare,"Has insurance but occasionally misses annual checkups"

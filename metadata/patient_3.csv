@@ -1,0 +1,35 @@
+Category,Subcategory,Example Value
+Medical & Surgical History,Chronic conditions,"None"
+Medical & Surgical History,Past surgeries,"Wisdom teeth removal"
+Medical & Surgical History,Previous diagnoses,"None"
+Medical & Surgical History,Infectious diseases,"None"
+
+Family History,Cardiovascular diseases,"None"
+Family History,Metabolic disorders,"Father: borderline high cholesterol"
+Family History,Neurological diseases,"Grandmother: mild dementia"
+Family History,Autoimmune diseases,"None"
+Family History,Mental health conditions,"Mother: anxiety disorder"
+
+Allergies & Sensitivities,Medication allergies,"None"
+Allergies & Sensitivities,Food allergies,"None"
+Allergies & Sensitivities,Environmental allergies,"None"
+
+Lifestyle Factors,Tobacco use,"Never smoked"
+Lifestyle Factors,Alcohol consumption,"Social (1-2 drinks/month)"
+Lifestyle Factors,Drug use,"None"
+Lifestyle Factors,Dietary habits,"High carb intake (pasta, bread)"
+Lifestyle Factors,Physical activity level,"Sedentary job, minimal exercise"
+
+Medical Gynecological & Obstetrical History,Menstrual cycle regularity & disorders,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of PCOS,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,History of pregnancy complications,"Not applicable (male)"
+Medical Gynecological & Obstetrical History,Menopause status & hormone therapy,"Not applicable (male)"
+
+Biometric Data,Height,"170 cm"
+Biometric Data,Weight,"75 kg"
+Biometric Data,Blood pressure,"128/84 mmHg"
+Biometric Data,Heart rate,"78 bpm"
+
+Social & Environmental Factors,Occupational risks,"Retail worker, on feet all day"
+Social & Environmental Factors,Living conditions,"Small town, good air quality"
+Social & Environmental Factors,Access to healthcare,"Insurance via employer, occasional checkups"
