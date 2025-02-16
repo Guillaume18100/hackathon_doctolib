@@ -1,0 +1,44 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a balanced diet plan focusing on low-fat, high-fiber foods to reduce cholesterol levels by 20% within the next 6 months.",
+        "observations": "The patient's cholesterol levels are consistently high, with LDL levels often exceeding 130 mg/dL and triglycerides frequently above 150 mg/dL.",
+        "patient_advise": "Follow the prescribed diet plan and consider incorporating foods rich in omega-3 fatty acids, such as fish and nuts, which can help lower triglyceride levels by up to 30%.",
+        "risk": "High Cholesterol Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce LDL cholesterol to below 100 mg/dL and triglycerides to below 150 mg/dL within the next year."
+      },
+      {
+        "doctor_advise": "Recommend regular physical activity, such as brisk walking or cycling for at least 150 minutes per week, to help lower blood glucose levels by 10-15%.",
+        "observations": "The patient's fasting glucose levels have been consistently above 100 mg/dL, indicating a prediabetic state.",
+        "patient_advise": "Increase physical activity to at least 150 minutes of moderate-intensity exercise per week to improve insulin sensitivity and lower blood glucose levels.",
+        "risk": "Elevated Fasting Glucose",
+        "severity_level": "High",
+        "therapeutic_goal": "Maintain fasting glucose levels below 100 mg/dL through lifestyle modifications and regular monitoring."
+      },
+      {
+        "doctor_advise": "Prescribe a weight management program aiming for a 5-10% reduction in body weight to improve overall metabolic health and reduce diabetes risk by 15-20%.",
+        "observations": "The patient's BMI has been consistently above 25 kg/m², indicating overweight status, which is a significant risk factor for Type 2 diabetes.",
+        "patient_advise": "Follow the prescribed weight management program, which includes a balanced diet and regular exercise, to achieve a healthier weight and reduce the risk of diabetes.",
+        "risk": "High Body Mass Index (BMI)",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through sustained lifestyle changes and regular follow-ups."
+      },
+      {
+        "doctor_advise": "Alert the healthcare professional about the necessity to fill in the missing blood pressure info through analysis prescription.",
+        "observations": "Blood pressure data is missing, which is crucial for assessing cardiovascular health and diabetes risk.",
+        "patient_advise": "Undergo blood pressure measurements as prescribed by the healthcare provider to ensure comprehensive risk assessment and management.",
+        "risk": "Unknown Blood Pressure",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Obtain and maintain regular blood pressure readings to monitor cardiovascular health and diabetes risk."
+      }
+    ],
+    "sources": [
+      "data/patient_2/historical_observations_patient_2.csv",
+      "data/patient_2/metadata_patient_2.csv"
+    ]
+  },
+  "doctor_summary": "- **Diet**: Low-fat, high-fiber foods to reduce cholesterol by 20% in 6 months.\n- **Exercise**: 150 minutes/week to lower blood glucose by 10-15%.\n- **Weight**: 5-10% reduction to improve metabolic health and reduce diabetes risk by 15-20%.\n- **Blood Pressure**: Alert healthcare professional to prescribe analysis for missing info.",
+  "patient_summary": "- Follow prescribed diet; include omega-3 rich foods (fish, nuts) to lower triglycerides.\n- Aim for 150 minutes of moderate exercise weekly to improve insulin sensitivity and lower blood glucose.\n- Adhere to prescribed weight management program (balanced diet, regular exercise) for healthier weight and reduced diabetes risk.\n- Regularly monitor blood pressure as advised by healthcare provider."
+}

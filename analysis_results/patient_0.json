@@ -1,0 +1,76 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a blood pressure monitoring device for the patient to track their blood pressure regularly at home. Advise the patient to maintain a log of their blood pressure readings and bring it to their next appointment for review.",
+        "observations": "The patient's blood pressure data is missing, which is crucial for assessing diabetes risk. High blood pressure is a significant risk factor for Type 2 diabetes.",
+        "patient_advise": "Purchase a blood pressure monitoring device and measure your blood pressure regularly. Maintain a log of your readings and bring it to your next appointment. Regular monitoring can help detect any potential issues early.",
+        "risk": "High Blood Pressure",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Obtain comprehensive blood pressure data to accurately assess diabetes risk and monitor for potential hypertension."
+      },
+      {
+        "doctor_advise": "Recommend the patient to engage in moderate-intensity physical activity for at least 150 minutes per week. This can include activities such as brisk walking, cycling, or swimming.",
+        "observations": "The patient's physical activity level is low, with gym attendance only once a month. A sedentary lifestyle significantly increases the risk of Type 2 diabetes.",
+        "patient_advise": "Increase your physical activity to at least 150 minutes of moderate-intensity exercise per week. This can reduce your diabetes risk by up to 15%. Consider activities like brisk walking, cycling, or swimming.",
+        "risk": "Sedentary Lifestyle",
+        "severity_level": "High",
+        "therapeutic_goal": "Increase physical activity to at least 150 minutes of moderate-intensity exercise per week to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Advise the patient to maintain a balanced diet with an emphasis on reducing sugar and fat intake while increasing fiber intake. Recommend consulting with a nutritionist for personalized dietary advice.",
+        "observations": "The patient's dietary habits are described as balanced, but specific details are lacking. A poor diet high in sugar and fat and low in fiber can increase diabetes risk by 5-15%.",
+        "patient_advise": "Focus on maintaining a balanced diet with reduced sugar and fat intake and increased fiber intake. Consider consulting with a nutritionist for personalized dietary advice. A healthy diet can reduce your diabetes risk by up to 15%.",
+        "risk": "Poor Diet",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain a balanced diet with reduced sugar and fat intake and increased fiber intake to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Prescribe regular HbA1c tests to monitor the patient's blood sugar levels over time. Advise the patient to maintain a log of their HbA1c levels and bring it to their next appointment for review.",
+        "observations": "The patient's HbA1c levels are consistently at 3.3%, which is below the normal range (4.0%-5.6%). This suggests a need for further investigation into potential underlying causes of low HbA1c.",
+        "patient_advise": "Undergo regular HbA1c tests to monitor your blood sugar levels. Maintain a log of your HbA1c levels and bring it to your next appointment. Regular monitoring can help detect any potential issues early.",
+        "risk": "Abnormal HbA1c Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Maintain HbA1c levels within the normal range (4.0%-5.6%) to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Recommend the patient to engage in stress-reducing activities such as yoga, meditation, or other relaxation techniques. Advise the patient to aim for 7-9 hours of sleep per night.",
+        "observations": "The patient's stress levels and sleep quality are not mentioned, but high stress and poor sleep can contribute to metabolic dysfunction and increase diabetes risk by up to 10%.",
+        "patient_advise": "Engage in stress-reducing activities such as yoga, meditation, or other relaxation techniques. Aim for 7-9 hours of sleep per night. Reducing stress and improving sleep can help reduce your diabetes risk.",
+        "risk": "High Stress and Poor Sleep",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Reduce stress levels and improve sleep quality to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Prescribe regular fasting glucose tests to monitor the patient's blood sugar levels. Advise the patient to maintain a log of their fasting glucose levels and bring it to their next appointment for review.",
+        "observations": "The patient's fasting glucose levels are within the normal range (70-99 mg/dL), but regular monitoring is essential to detect any potential increases in blood sugar levels early.",
+        "patient_advise": "Undergo regular fasting glucose tests to monitor your blood sugar levels. Maintain a log of your fasting glucose levels and bring it to your next appointment. Regular monitoring can help detect any potential issues early.",
+        "risk": "Elevated Fasting Glucose",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain fasting glucose levels within the normal range (70-99 mg/dL) to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Recommend the patient to engage in regular physical activity and maintain a healthy diet to reduce their BMI. Advise the patient to aim for a BMI within the normal range (18.5-24.9 kg/m²).",
+        "observations": "The patient's BMI is 31.37 kg/m², which is in the obese range. A high BMI significantly increases the risk of Type 2 diabetes. Each 1 kg/m² increase in BMI increases risk by 1-3%.",
+        "patient_advise": "Engage in regular physical activity and maintain a healthy diet to reduce your BMI. Aim for a BMI within the normal range (18.5-24.9 kg/m²). Reducing your BMI can significantly reduce your diabetes risk.",
+        "risk": "High BMI",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to within the normal range (18.5-24.9 kg/m²) to reduce diabetes risk."
+      },
+      {
+        "doctor_advise": "Prescribe regular cholesterol tests to monitor the patient's cholesterol levels. Advise the patient to maintain a log of their cholesterol levels and bring it to their next appointment for review.",
+        "observations": "The patient's total cholesterol levels are borderline high (190-199 mg/dL), and their LDL cholesterol levels are high (>130 mg/dL). High cholesterol levels contribute to diabetes risk.",
+        "patient_advise": "Undergo regular cholesterol tests to monitor your cholesterol levels. Maintain a log of your cholesterol levels and bring it to your next appointment. Regular monitoring can help detect any potential issues early.",
+        "risk": "High Cholesterol",
+        "severity_level": "High",
+        "therapeutic_goal": "Maintain total cholesterol levels below 190 mg/dL and LDL cholesterol levels below 130 mg/dL to reduce diabetes risk."
+      }
+    ],
+    "sources": [
+      "data/patient_0/historical_observations_patient_0.csv",
+      "data/patient_0/metadata_patient_0.csv"
+    ]
+  },
+  "doctor_summary": "- **Home Monitoring:** Track blood pressure, blood sugar (HbA1c and fasting glucose), and cholesterol levels regularly. Log results for review at next appointment.\n- **Lifestyle Changes:**\n  - Engage in moderate-intensity physical activity (e.g., brisk walking, cycling, swimming) for at least 150 minutes per week.\n  - Maintain a balanced diet, reducing sugar and fat intake, increasing fiber. Consult a nutritionist for personalized advice.\n  - Practice stress-reducing activities like yoga or meditation. Aim for 7-9 hours of sleep per night.\n  - Maintain a healthy BMI (18.5-24.9 kg/m²) through regular physical activity and a healthy diet.",
+  "patient_summary": "- Monitor blood pressure, HbA1c, fasting glucose, and cholesterol levels regularly and log results.\n- Engage in at least 150 minutes of moderate-intensity exercise per week.\n- Maintain a balanced, low-sugar, low-fat, high-fiber diet,consulting a nutritionist if needed.\n- Practice stress reduction techniques and aim for 7-9 hours of sleep per night.\n- Maintain a healthy BMI (18.5-24.9 kg/m²) through regular exercise and a healthy diet."
+}

@@ -1,0 +1,44 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a balanced diet plan focusing on low-fat, high-fiber foods to reduce cholesterol levels by 40%. Recommend regular physical activity, aiming for at least 150 minutes of moderate-intensity exercise per week to improve insulin sensitivity and reduce BMI by 5%.",
+        "observations": "The patient has a consistently high BMI of around 39 kg/m², which significantly increases the risk of Type 2 diabetes. The patient's cholesterol levels are also elevated, with total cholesterol ranging from 239 mg/dL to 256 mg/dL, LDL cholesterol ranging from 130 mg/dL to 170 mg/dL, and triglycerides ranging from 296 mg/dL to 487 mg/dL.",
+        "patient_advise": "Follow the prescribed diet plan and increase physical activity to at least 150 minutes of moderate-intensity exercise per week. Consider taking statins to lower cholesterol levels and metformin to improve insulin sensitivity.",
+        "risk": "High BMI and Elevated Cholesterol Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI by 5% and lower total cholesterol to below 200 mg/dL, LDL cholesterol to below 100 mg/dL, and triglycerides to below 150 mg/dL within the next 6 months."
+      },
+      {
+        "doctor_advise": "Advise the patient to quit smoking immediately and provide resources for smoking cessation programs. Prescribe a low-sodium diet and regular exercise to manage borderline high blood pressure.",
+        "observations": "The patient is an occasional smoker, which increases the risk of Type 2 diabetes by 10-20%. Additionally, the patient has borderline high blood pressure, which can exacerbate the risk of diabetes and its complications.",
+        "patient_advise": "Quit smoking immediately using recommended cessation programs. Follow a low-sodium diet and engage in regular exercise to manage blood pressure.",
+        "risk": "Smoking and Borderline High Blood Pressure",
+        "severity_level": "Medium",
+        "therapeutic_goal": "Achieve complete smoking cessation and maintain blood pressure within the normal range (below 130/85 mmHg) within the next 3 months."
+      },
+      {
+        "doctor_advise": "Prescribe a diet rich in fruits and vegetables and low in red meat and processed foods to improve overall dietary habits. Recommend increasing physical activity to at least 150 minutes of moderate-intensity exercise per week.",
+        "observations": "The patient has a moderate intake of red meat and processed foods, with limited consumption of fruits and vegetables. The patient's physical activity level is low, with light exercise only once a week.",
+        "patient_advise": "Follow the prescribed diet plan and increase physical activity to at least 150 minutes of moderate-intensity exercise per week.",
+        "risk": "Poor Dietary Habits and Low Physical Activity",
+        "severity_level": "Medium",
+        "therapeutic_goal": "Improve dietary habits by increasing fruit and vegetable intake and reducing red meat and processed food consumption. Achieve at least 150 minutes of moderate-intensity exercise per week within the next 3 months."
+      },
+      {
+        "doctor_advise": "Alert the healthcare professional about the necessity to fill in the missing information on the patient's blood pressure through regular blood pressure monitoring and analysis prescription.",
+        "observations": "The patient's blood pressure data is missing, which is crucial for assessing the risk of Type 2 diabetes and its complications.",
+        "patient_advise": "Follow the healthcare professional's recommendations for regular blood pressure monitoring and analysis.",
+        "risk": "Missing Blood Pressure Data",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Obtain complete blood pressure data to accurately assess the risk of Type 2 diabetes and its complications within the next month."
+      }
+    ],
+    "sources": [
+      "data/patient_1/historical_observations_patient_1.csv",
+      "data/patient_1/metadata_patient_1.csv"
+    ]
+  },
+  "doctor_summary": "- **Diet**: Low-fat, high-fiber, low-sodium, rich in fruits and vegetables, low in red meat and processed foods.\n- **Exercise**: At least 150 minutes of moderate-intensity activity per week.\n- **Habits**: Quit smoking, monitor blood pressure regularly.\n- **Goals**: Reduce cholesterol by 40%, reduce BMI by 5%, improve insulin sensitivity, manage blood pressure.\n- **Additional**: Provide smoking cessation resources, alert healthcare professional to monitor blood pressure.",
+  "patient_summary": "- Follow prescribed diet plan and exercise at least 150 minutes moderately per week.\n- Consider statins for cholesterol and metformin for insulin sensitivity.\n- Quit smoking using recommended programs.\n- Adopt a low-sodium diet and exercise regularly for blood pressure management.\n- Monitor blood pressure regularly as advised by healthcare professional."
+}
