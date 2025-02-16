@@ -2,44 +2,84 @@
   "initial_response": {
     "risks": [
       {
-        "doctor_advise": "Prescribe a balanced diet plan focusing on reducing cholesterol levels by 40%. Recommend regular exercise, aiming for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week, along with muscle-strengthening activities on 2 or more days a week.",
-        "observations": "The patient's total cholesterol levels are consistently high, ranging from 239 mg/dL to 256 mg/dL, with LDL cholesterol levels between 130 mg/dL and 170 mg/dL, and triglycerides between 296 mg/dL and 487 mg/dL. HDL cholesterol levels are low, ranging from 25 mg/dL to 38 mg/dL.",
-        "patient_advise": "Follow the prescribed diet plan and increase physical activity as advised. Consider taking cholesterol-lowering medication such as statins or fibrates as prescribed by your doctor.",
-        "risk": "High Cholesterol Levels",
-        "severity_level": "High",
-        "therapeutic_goal": "Reduce total cholesterol to <200 mg/dL, LDL cholesterol to <100 mg/dL, triglycerides to <150 mg/dL, and increase HDL cholesterol to >40 mg/dL for men."
+        "doctor_advise": "Prescribe a blood pressure monitoring routine for the patient. Recommend a balanced diet and regular physical activity to lower blood pressure and improve overall health.",
+        "observations": "Blood pressure data is missing from the observations. This is a critical component for assessing diabetes risk.",
+        "patient_advise": "Monitor your blood pressure regularly using a home blood pressure monitor. Aim for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week to help lower your blood pressure.",
+        "risk": "High Blood Pressure",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Reduce blood pressure to below 130/85 mmHg through lifestyle changes and potential medication if necessary."
       },
       {
-        "doctor_advise": "Advise the patient to gradually reduce weight by 5-10% through a combination of a healthy diet and increased physical activity. Monitor progress and adjust the plan as needed.",
-        "observations": "The patient's BMI is consistently high, ranging from 38.22 kg/m² to 39.77 kg/m². This indicates obesity, which is a significant risk factor for Type 2 diabetes.",
-        "patient_advise": "Follow a balanced diet and engage in regular physical activity to achieve a healthy weight. Aim to reduce BMI by 1-3% through sustained lifestyle changes.",
+        "doctor_advise": "Recommend a low-fat, high-fiber diet and increased physical activity to help lower cholesterol levels. Consider prescribing statins if lifestyle changes are not sufficient.",
+        "observations": "The patient has consistently high total cholesterol levels, ranging from 239 mg/dL to 256 mg/dL, with LDL levels ranging from 130 mg/dL to 170 mg/dL and triglycerides ranging from 247 mg/dL to 487 mg/dL. These levels are significantly above the recommended ranges and pose a high risk for diabetes and cardiovascular diseases.",
+        "patient_advise": "Adopt a diet rich in fruits, vegetables, whole grains, and lean proteins. Aim for at least 30 minutes of physical activity most days of the week. A balanced diet could reduce cholesterol level by 40%.",
+        "risk": "High Cholesterol",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce total cholesterol to below 200 mg/dL, LDL cholesterol to below 100 mg/dL, and triglycerides to below 150 mg/dL."
+      },
+      {
+        "doctor_advise": "Encourage the patient to engage in regular physical activity and adopt a healthier diet to reduce BMI. Consider referring the patient to a nutritionist or dietitian for personalized advice.",
+        "observations": "The patient has a consistently high BMI, ranging from 38.22 kg/m² to 39.77 kg/m². This level of obesity significantly increases the risk of developing Type 2 diabetes.",
+        "patient_advise": "Increase your physical activity to at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week. Adopt a balanced diet with fewer calories to help reduce your BMI.",
         "risk": "High BMI",
         "severity_level": "High",
-        "therapeutic_goal": "Reduce BMI to <25 kg/m² through sustained lifestyle changes and weight management strategies."
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through a combination of diet and exercise."
       },
       {
-        "doctor_advise": "Prescribe a low-sugar, high-fiber diet to improve glucose control. Monitor blood glucose levels regularly and consider prescribing metformin if lifestyle changes are insufficient.",
-        "observations": "The patient's fasting glucose levels are elevated, ranging from 130 mg/dL to 190 mg/dL, which indicates prediabetes or diabetes.",
-        "patient_advise": "Follow the prescribed diet and monitor blood glucose levels as advised. Consider taking metformin if lifestyle changes are not enough to control glucose levels.",
-        "risk": "Elevated Fasting Glucose",
-        "severity_level": "High",
-        "therapeutic_goal": "Maintain fasting glucose levels within the normal range (<100 mg/dL) through diet, exercise, and medication if necessary."
-      },
-      {
-        "doctor_advise": "Prescribe a comprehensive lifestyle change program that includes smoking cessation support, such as nicotine replacement therapy or medication like varenicline.",
-        "observations": "The patient is an occasional smoker, which increases the risk of Type 2 diabetes by 10-20%.",
-        "patient_advise": "Quit smoking with the help of prescribed medication or nicotine replacement therapy. Engage in a smoking cessation program for support.",
+        "doctor_advise": "Advise the patient to gradually reduce and eventually quit smoking. Provide resources for smoking cessation programs and consider nicotine replacement therapy if necessary.",
+        "observations": "The patient is an occasional smoker, which increases the risk of developing Type 2 diabetes by 10-20%.",
+        "patient_advise": "Gradually reduce the number of cigarettes smoked per day with the goal of quitting completely. Consider using nicotine replacement therapy or other smoking cessation aids as recommended by your doctor.",
         "risk": "Smoking",
-        "severity_level": "Medium",
-        "therapeutic_goal": "Achieve complete smoking cessation to reduce the risk of Type 2 diabetes and improve overall health."
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Quit smoking completely to reduce the risk of diabetes and improve overall health."
       },
       {
-        "doctor_advise": "Prescribe a blood pressure measurement and monitor it regularly. If elevated, consider prescribing antihypertensive medication and lifestyle changes to manage blood pressure.",
-        "observations": "The patient's blood pressure data is missing, which is crucial for assessing diabetes risk.",
-        "patient_advise": "Follow up with blood pressure measurements as advised. If elevated, follow the prescribed treatment plan, which may include medication and lifestyle changes.",
-        "risk": "Unknown Blood Pressure",
-        "severity_level": "Unknown",
-        "therapeutic_goal": "Maintain blood pressure within the normal range (<130/85 mmHg) through regular monitoring, medication, and lifestyle changes if necessary."
+        "doctor_advise": "Recommend regular monitoring of HbA1c levels and consider prescribing medication to manage glucose levels if lifestyle changes are not sufficient.",
+        "observations": "The patient's HbA1c levels have been consistently high, ranging from 5.1% to 8.4%. These levels indicate a high risk of developing Type 2 diabetes.",
+        "patient_advise": "Monitor your HbA1c levels regularly as recommended by your doctor. Adopt a low-glycemic diet and engage in regular physical activity to help manage your glucose levels.",
+        "risk": "High HbA1c Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce HbA1c levels to below 5.7% through lifestyle changes and potential medication if necessary."
+      },
+      {
+        "doctor_advise": "Recommend regular monitoring of fasting glucose levels and consider prescribing medication to manage glucose levels if lifestyle changes are not sufficient.",
+        "observations": "The patient's fasting glucose levels have been consistently high, ranging from 130 mg/dL to 190 mg/dL. These levels indicate a high risk of developing Type 2 diabetes.",
+        "patient_advise": "Monitor your fasting glucose levels regularly as recommended by your doctor. Adopt a low-glycemic diet and engage in regular physical activity to help manage your glucose levels.",
+        "risk": "High Fasting Glucose Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce fasting glucose levels to below 100 mg/dL through lifestyle changes and potential medication if necessary."
+      },
+      {
+        "doctor_advise": "Encourage the patient to increase physical activity levels and adopt a healthier diet. Consider referring the patient to a physical therapist or personal trainer for personalized exercise recommendations.",
+        "observations": "The patient engages in light exercise only once a week, which is insufficient for maintaining good metabolic health. A sedentary lifestyle significantly increases the risk of developing Type 2 diabetes.",
+        "patient_advise": "Increase your physical activity to at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week. Include strength training exercises at least 2 days a week.",
+        "risk": "Sedentary Lifestyle",
+        "severity_level": "High",
+        "therapeutic_goal": "Engage in regular physical activity to improve metabolic health and reduce the risk of diabetes."
+      },
+      {
+        "doctor_advise": "Recommend a diet rich in fruits, vegetables, whole grains, and lean proteins. Consider referring the patient to a nutritionist or dietitian for personalized advice.",
+        "observations": "The patient has a moderate intake of red meat and processed foods, with limited consumption of fruits and vegetables. This poor diet increases the risk of developing Type 2 diabetes by 5-15%.",
+        "patient_advise": "Adopt a balanced diet with more fruits, vegetables, whole grains, and lean proteins. Reduce your intake of red meat, processed foods, and sugary beverages.",
+        "risk": "Poor Diet",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Improve diet quality to reduce the risk of diabetes and improve overall health."
+      },
+      {
+        "doctor_advise": "Advise the patient to limit alcohol consumption to no more than 1 drink per day for women and 2 drinks per day for men. Provide resources for managing alcohol consumption if necessary.",
+        "observations": "The patient engages in social drinking, consuming 2-3 drinks per week. While this level of consumption is generally considered moderate, it still contributes to the risk of developing Type 2 diabetes.",
+        "patient_advise": "Limit your alcohol consumption to no more than 1 drink per day if you are a woman and 2 drinks per day if you are a man. Consider non-alcoholic beverage alternatives.",
+        "risk": "Alcohol Consumption",
+        "severity_level": "Low",
+        "therapeutic_goal": "Reduce alcohol consumption to within recommended limits to reduce the risk of diabetes and improve overall health."
+      },
+      {
+        "doctor_advise": "Recommend regular monitoring of blood pressure, cholesterol levels, and glucose levels. Consider prescribing medication to manage these risk factors if lifestyle changes are not sufficient.",
+        "observations": "The patient has a family history of type 2 diabetes (maternal grandmother) and mild hypertension (father). This family history increases the patient's risk of developing Type 2 diabetes by 5-10%.",
+        "patient_advise": "Be aware of your family history of diabetes and hypertension. Engage in regular physical activity, adopt a healthy diet, and monitor your blood pressure, cholesterol levels, and glucose levels as recommended by your doctor.",
+        "risk": "Family History of Diabetes and Hypertension",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Manage risk factors associated with family history to reduce the risk of diabetes."
       }
     ],
     "sources": [
@@ -47,6 +87,6 @@
       "data/patient_1/metadata_patient_1.csv"
     ]
   },
-  "doctor_summary": "- Reduce cholesterol through a balanced diet (40% reduction target) and regular exercise (150 min moderate or 75 min vigorous aerobic activity per week, plus strength training 2+ days/week).\n- Aim for gradual weight loss (5-10%) through healthy diet and increased physical activity; monitor and adjust plan as needed.\n- Improve glucose control with a low-sugar, high-fiber diet; monitor blood glucose and consider metformin if necessary.\n- Provide smoking cessation support, including nicotine replacement therapy or medication like varenicline.\n- Monitor blood pressure regularly; consider antihypertensive medication and lifestyle changes if elevated.",
-  "patient_summary": "- Follow prescribed diet and exercise plans.\n- Consider medication for cholesterol (statins/fibrates) or glucose (metformin) control.\n- Aim to reduce BMI by 1-3% through sustained lifestyle changes.\n- Quit smoking with medication/therapy and join a cessation program.\n- Monitor and manage blood pressure with medication and lifestyle changes."
+  "doctor_summary": "- Monitor blood pressure, cholesterol, and glucose levels regularly.\n- Promote a balanced, low-fat, high-fiber diet rich in fruits, vegetables, whole grains, and lean proteins.\n- Encourage regular physical activity and offer personalized exercise recommendations.\n- Advise gradual smoking cessation and limit alcohol consumption to 1 drink/day for women and 2 drinks/day for men.\n- Consider prescribing medication or referring to specialists if lifestyle changes are insufficient.",
+  "patient_summary": "- **Exercise**: Aim for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week, plus strength training at least 2 days a week.\n- **Diet**: Consume more fruits, vegetables, whole grains, and lean proteins. Reduce intake of red meat, processed foods, sugary beverages, and calories for BMI reduction. Adopt a low-glycemic diet for managing glucose levels.\n- **Monitor**: Regularly check blood pressure, cholesterol, HbA1c, and fasting glucose levels as recommended by your doctor.\n- **Limit**: Restrict alcohol consumption to no more than 1 drink per day for women and 2 drinks per day for men.\n- **Quit Smoking**: Gradually reduce the number of cigarettes smoked daily with the goal of quitting completely. Consider using nicotine replacement therapy or other aids.\n- **Be Aware**: Know your family history of diabetes and hypertension."
 }

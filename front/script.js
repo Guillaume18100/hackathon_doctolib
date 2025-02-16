@@ -99,21 +99,39 @@ patientItems.forEach(item => {
 // ========== Display AI Analysis ==========
 function displayAiAnalysis(aiResult) {
   resetTables();
-  const { initial_response, doctor_summary, patient_summary } = aiResult;
-  if (!initial_response) {
-    patientOverview.innerHTML += `<p class="text-red-600">No initial_response in AI result</p>`;
-    return;
+  
+  // Determine if the API returned a nested structure (old) or a flat structure (new)
+  let riskData, doctorSummaryText, patientSummaryText, sources;
+  
+  if (aiResult.initial_response && aiResult.initial_response.risks) {
+    // Old (nested) structure
+    riskData = aiResult.initial_response.risks;
+    doctorSummaryText = aiResult.doctor_summary;
+    patientSummaryText = aiResult.patient_summary;
+    sources = aiResult.initial_response.sources;
+  } else {
+    // Flat structure: create an array with one element using the flat keys
+    riskData = [{
+      risk: aiResult.risk,
+      severity_level: aiResult.severity_level,
+      observations: aiResult.observations,
+      therapeutic_goal: aiResult.therapeutic_goal
+    }];
+    doctorSummaryText = aiResult.doctor_advise;
+    patientSummaryText = aiResult.patient_advise;
+    sources = aiResult.sources || [];
   }
-  const { risks, sources } = initial_response;
-
-  // Fill the Diabetes table
-  if (risks && risks.length > 0) {
-    risks.forEach(riskItem => {
+  
+  // Fill the Diabetes table with a single row (4 columns):
+  // Risk, Severity, Observations, and Therapeutic Goal.
+  if (riskData && riskData.length > 0) {
+    riskData.forEach(riskItem => {
       const rowHTML = `
         <tr>
-          <td class="border px-4 py-2">${riskItem.risk}</td>
-          <td class="border px-4 py-2">${riskItem.observations}</td>
-          <td class="border px-4 py-2">${riskItem.severity_level}</td>
+          <td class="border px-4 py-2">${riskItem.risk || "No data"}</td>
+          <td class="border px-4 py-2">${riskItem.severity_level || "--"}</td>
+          <td class="border px-4 py-2">${riskItem.observations || "--"}</td>
+          <td class="border px-4 py-2">${riskItem.therapeutic_goal || "--"}</td>
         </tr>
       `;
       diabetesTableBody.innerHTML += rowHTML;
@@ -125,16 +143,19 @@ function displayAiAnalysis(aiResult) {
         <td class="border px-4 py-2">No data</td>
         <td class="border px-4 py-2">--</td>
         <td class="border px-4 py-2">--</td>
+        <td class="border px-4 py-2">--</td>
       </tr>
     `;
   }
-
-  // Summaries
-  doctorSummaryContainer.innerHTML = bulletify(doctor_summary);
-  patientSummaryContainer.innerHTML = bulletify(patient_summary);
-
-  // AI Sources
-  let sourcesHTML = (sources || []).map(src => `<li class="text-sm text-blue-600 hover:underline"><a href="#">${src}</a></li>`).join("");
+  
+  // Update the right sidebar summaries
+  doctorSummaryContainer.innerHTML = bulletify(doctorSummaryText);
+  patientSummaryContainer.innerHTML = bulletify(patientSummaryText);
+  
+  // Update AI sources if available
+  let sourcesHTML = (sources || [])
+    .map(src => `<li class="text-sm text-blue-600 hover:underline"><a href="#">${src}</a></li>`)
+    .join("");
   if (!sourcesHTML) sourcesHTML = "<li>No sources found</li>";
   aiSources.innerHTML = `<ul class="list-disc list-inside">${sourcesHTML}</ul>`;
 }
