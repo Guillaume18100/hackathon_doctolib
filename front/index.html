@@ -21,6 +21,7 @@
   <div class="flex">
     <!-- Left Sidebar: Search, Patient List, Upload Files -->
     <aside class="w-1/4 p-4 border-r border-gray-300 space-y-6">
+      <!-- Search Patients -->
       <div>
         <input
           type="text"
@@ -29,10 +30,11 @@
           class="w-full p-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#05066D]"
         />
       </div>
+      <!-- Patient List -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Patient List</h2>
         <ul id="patientList" class="space-y-2">
-          <!-- Example patients -->
+          <!-- Example patients with directories -->
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
               data-patient='{"name": "Patient 0", "age": 42, "directory": "data/patient_0"}'>
             Patient 0
@@ -41,8 +43,17 @@
               data-patient='{"name": "Patient 1", "age": 50, "directory": "data/patient_1"}'>
             Patient 1
           </li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+              data-patient='{"name": "Patient 2", "age": 60, "directory": "data/patient_2"}'>
+            Patient 2
+          </li>
+          <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
+              data-patient='{"name": "Patient 3", "age": 38, "directory": "data/patient_3"}'>
+            Patient 3
+          </li>
         </ul>
       </div>
+      <!-- Upload New Files -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Upload New Files</h2>
         <input type="file" class="w-full p-2 border border-[#E1EAFE] rounded-lg" multiple>
@@ -55,6 +66,7 @@
         <h2 class="text-2xl font-bold mb-4" id="patientNameTitle">Patient Overview</h2>
         <p>Select a patient from the list to load their AI analysis.</p>
       </div>
+
       <div class="glass-panel p-4" id="conditionTables" hidden>
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Condition Tables</h2>
         
@@ -119,26 +131,18 @@
       </div>
     </main>
     
-    <!-- Right Sidebar: Summaries, Test Propositions, AI Sources -->
+    <!-- Right Sidebar: AI Analysis Summaries and AI Opinion Sources -->
     <aside id="rightSidebar" class="w-1/4 p-4 border-l border-gray-300 space-y-6">
-      <!-- Test Propositions -->
-      <div class="glass-panel rounded-xl p-4">
-        <h2 class="text-xl font-bold text-[#05066D] mb-4">Test Propositions</h2>
-        <div id="testProps">
-          <p>Select a patient to view recommendations.</p>
-        </div>
-      </div>
-
-      <!-- Doctor & Patient Summaries (No raw JSON) -->
+      <!-- AI Analysis Summaries -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">AI Analysis Summaries</h2>
         <div id="doctorSummaryPanel" class="mb-4">
           <h3 class="font-semibold text-[#05066D]">Doctor Summary:</h3>
-          <div id="doctorSummaryContainer"></div>
+          <div id="doctorSummaryContainer">No data yet.</div>
         </div>
         <div id="patientSummaryPanel" class="mb-4">
           <h3 class="font-semibold text-[#05066D]">Patient Summary:</h3>
-          <div id="patientSummaryContainer"></div>
+          <div id="patientSummaryContainer">No data yet.</div>
         </div>
       </div>
 
@@ -150,7 +154,7 @@
         </div>
       </div>
 
-      <!-- Additional Info -->
+      <!-- Additional Information -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Additional Information</h2>
         <p class="text-[#05066D]">
