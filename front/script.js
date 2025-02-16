@@ -159,3 +159,128 @@ function displayAiAnalysis(aiResult) {
   if (!sourcesHTML) sourcesHTML = "<li>No sources found</li>";
   aiSources.innerHTML = `<ul class="list-disc list-inside">${sourcesHTML}</ul>`;
 }
+
+// Original patient handling code unchanged
+    // Patient Search Functionality
+    const searchInput = document.getElementById('patientSearch');
+    
+    searchInput.addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+      const items = patientList.getElementsByTagName('li');
+      Array.from(items).forEach(item => {
+        const name = item.textContent.toLowerCase();
+        item.style.display = name.includes(filter) ? '' : 'none';
+      });
+    });
+    
+    class FileUploader {
+      constructor() {
+        this.fileMap = new Map();
+        this.uploadContainer = document.getElementById('uploadContainer');
+        this.fileInput = document.getElementById('fileInput');
+        this.fileList = document.getElementById('fileList');
+        this.initEventHandlers();
+      }
+
+      initEventHandlers() {
+        this.uploadContainer.addEventListener('click', () => this.fileInput.click());
+        
+        this.fileInput.addEventListener('change', (e) => {
+          this.handleFiles(e.target.files);
+        });
+
+        // Drag-and-drop handlers
+        ['dragenter', 'dragover'].forEach(event => {
+          this.uploadContainer.addEventListener(event, this.highlightDropzone.bind(this));
+        });
+        
+        ['dragleave', 'drop'].forEach(event => {
+          this.uploadContainer.addEventListener(event, this.unhighlightDropzone.bind(this));
+        });
+
+        this.uploadContainer.addEventListener('drop', (e) => {
+          e.preventDefault();
+          this.handleFiles(e.dataTransfer.files);
+        });
+      }
+
+      handleFiles(files) {
+        Array.from(files).forEach(file => {
+          if(this.validateFile(file)) {
+            this.fileMap.set(file.name, file);
+          }
+        });
+        this.renderFileList();
+      }
+
+      validateFile(file) {
+        const MAX_SIZE = 25 * 1024 * 1024; // 25MB
+        const validTypes = ['image/png', 'application/pdf'];
+        
+        if(!validTypes.includes(file.type)) {
+          alert('Invalid file type');
+          return false;
+        }
+        
+        if(file.size > MAX_SIZE) {
+          alert('File size exceeds 25MB limit');
+          return false;
+        }
+        
+        return true;
+      }
+
+      renderFileList() {
+        this.fileList.innerHTML = '';
+        
+        this.fileMap.forEach((file, name) => {
+          const fileEl = document.createElement('div');
+          fileEl.className = 'flex items-center justify-between p-3 bg-white rounded-lg border border-[#E1EAFE]';
+          
+          fileEl.innerHTML = `
+            <div class="flex-1 truncate">
+              <span class="font-medium text-[#05066D]">${name}</span>
+              <span class="text-sm text-[#05066D]/80 ml-2">${this.formatFileSize(file.size)}</span>
+            </div>
+            <button class="text-red-500 hover:text-red-700 transition-colors" aria-label="Remove file">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+              </svg>
+            </button>
+          `;
+          
+          fileEl.querySelector('button').addEventListener('click', () => {
+            this.fileMap.delete(name);
+            this.renderFileList();
+          });
+          
+          this.fileList.appendChild(fileEl);
+        });
+      }
+
+      formatFileSize(bytes) {
+        const units = ['B', 'KB', 'MB', 'GB'];
+        let size = bytes;
+        let unitIndex = 0;
+        
+        while(size >= 1024 && unitIndex < units.length - 1) {
+          size /= 1024;
+          unitIndex++;
+        }
+        
+        return `${size.toFixed(1)}${units[unitIndex]}`;
+      }
+
+      highlightDropzone(e) {
+        e.preventDefault();
+        this.uploadContainer.classList.add('dragover');
+      }
+
+      unhighlightDropzone(e) {
+        e.preventDefault();
+        this.uploadContainer.classList.remove('dragover');
+      }
+    }
+
+    // Initialize uploader
+    new FileUploader();

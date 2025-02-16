@@ -2,36 +2,36 @@
   "initial_response": {
     "risks": [
       {
-        "doctor_advise": "Prescribe a blood pressure monitoring device for the patient to track their blood pressure regularly. Advise the patient to maintain a healthy diet and regular physical activity to manage their weight and cholesterol levels.",
-        "observations": "The patient's BMI has been consistently high, ranging from 26.24 to 28.86 kg/m², which significantly increases the risk of Type 2 diabetes. The patient's cholesterol levels are also elevated, with LDL levels ranging from 117 to 156 mg/dL and HDL levels ranging from 42 to 56 mg/dL, which further contributes to the risk. The patient's fasting glucose levels are borderline, ranging from 100 to 122 mg/dL, indicating a higher risk of developing diabetes. The patient's HbA1c levels have been consistently above 5.7%, ranging from 3.6% to 4.2%, which is a strong indicator of prediabetes.",
-        "patient_advise": "Use the prescribed blood pressure monitoring device to track your blood pressure regularly. Aim to maintain a healthy diet and engage in regular physical activity, such as jogging, to manage your weight and cholesterol levels. Consider incorporating more fiber into your diet to help lower your cholesterol levels by up to 15%.",
-        "risk": "High",
+        "doctor_advise": "Prescribe a balanced diet plan focusing on low-fat, high-fiber foods to reduce cholesterol levels by 20% within the next 6 months.",
+        "observations": "The patient's cholesterol levels are consistently high, with LDL levels often exceeding 130 mg/dL and triglycerides frequently above 150 mg/dL.",
+        "patient_advise": "Follow the prescribed diet plan and consider incorporating foods rich in omega-3 fatty acids, such as fish and nuts, which can help lower triglyceride levels by up to 30%.",
+        "risk": "High Cholesterol Levels",
         "severity_level": "High",
-        "therapeutic_goal": "Reduce BMI to below 25 kg/m², lower LDL cholesterol to below 100 mg/dL, and maintain HbA1c levels below 5.7% through lifestyle modifications and regular monitoring of blood pressure and glucose levels."
+        "therapeutic_goal": "Reduce LDL cholesterol to below 100 mg/dL and triglycerides to below 150 mg/dL within the next year."
       },
       {
-        "doctor_advise": "Prescribe a comprehensive lipid profile test to assess the patient's cholesterol levels in detail. Advise the patient to incorporate more physical activity into their daily routine to help manage their weight and improve their cholesterol levels.",
-        "observations": "The patient's triglyceride levels are elevated, ranging from 151 to 187 mg/dL, which contributes to the risk of Type 2 diabetes. The patient's HDL cholesterol levels are borderline, ranging from 42 to 56 mg/dL, which is slightly below the optimal range for women (>50 mg/dL). The patient's lifestyle factors, such as occasional alcohol consumption and a balanced diet, may help mitigate some of the risk, but more physical activity could further reduce the risk.",
-        "patient_advise": "Incorporate more physical activity into your daily routine, such as brisk walking or cycling, to help manage your weight and improve your cholesterol levels. Aim for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week, along with muscle-strengthening activities on 2 or more days a week.",
-        "risk": "Moderate",
-        "severity_level": "Moderate",
-        "therapeutic_goal": "Lower triglyceride levels to below 150 mg/dL and increase HDL cholesterol levels to above 50 mg/dL through increased physical activity and maintaining a healthy diet."
-      },
-      {
-        "doctor_advise": "Prescribe a glucose tolerance test to assess the patient's blood sugar levels in more detail. Advise the patient to maintain a consistent sleep schedule and practice stress management techniques to improve their overall health.",
-        "observations": "The patient's fasting glucose levels are borderline, ranging from 100 to 122 mg/dL, which indicates a higher risk of developing diabetes. The patient's HbA1c levels have been consistently above 5.7%, ranging from 3.6% to 4.2%, which is a strong indicator of prediabetes. The patient's lifestyle factors, such as never smoking and occasional alcohol consumption, may help mitigate some of the risk, but poor sleep and high stress levels could contribute to metabolic dysfunction and increase the risk of Type 2 diabetes.",
-        "patient_advise": "Maintain a consistent sleep schedule, aiming for 7-9 hours of sleep per night, to improve your overall health and reduce the risk of metabolic dysfunction. Practice stress management techniques, such as meditation or deep breathing exercises, to help manage stress levels and improve your overall well-being.",
-        "risk": "High",
+        "doctor_advise": "Recommend regular physical activity, such as brisk walking or cycling for at least 150 minutes per week, to help lower blood glucose levels by 10-15%.",
+        "observations": "The patient's fasting glucose levels have been consistently above 100 mg/dL, indicating a prediabetic state.",
+        "patient_advise": "Increase physical activity to at least 150 minutes of moderate-intensity exercise per week to improve insulin sensitivity and lower blood glucose levels.",
+        "risk": "Elevated Fasting Glucose",
         "severity_level": "High",
-        "therapeutic_goal": "Maintain fasting glucose levels below 100 mg/dL and HbA1c levels below 5.7% through lifestyle modifications and regular monitoring of blood sugar levels. Improve sleep quality and manage stress levels to reduce the risk of metabolic dysfunction."
+        "therapeutic_goal": "Maintain fasting glucose levels below 100 mg/dL through lifestyle modifications and regular monitoring."
       },
       {
-        "doctor_advise": "Prescribe a comprehensive blood pressure assessment to evaluate the patient's cardiovascular health. Advise the patient to maintain a healthy diet and regular physical activity to manage their weight and blood pressure levels.",
-        "observations": "The patient's blood pressure data is missing, which is crucial for assessing the risk of Type 2 diabetes. High blood pressure is a known risk factor for diabetes, and without this information, it is difficult to accurately assess the patient's risk. The patient's BMI has been consistently high, ranging from 26.24 to 28.86 kg/m², which significantly increases the risk of Type 2 diabetes. The patient's cholesterol levels are also elevated, with LDL levels ranging from 117 to 156 mg/dL and HDL levels ranging from 42 to 56 mg/dL, which further contributes to the risk.",
-        "patient_advise": "Schedule an appointment with your healthcare provider to have your blood pressure assessed. Maintain a healthy diet and engage in regular physical activity, such as jogging, to manage your weight and blood pressure levels. Consider incorporating more fruits and vegetables into your diet to help lower your blood pressure by up to 10%.",
-        "risk": "Unknown",
+        "doctor_advise": "Prescribe a weight management program aiming for a 5-10% reduction in body weight to improve overall metabolic health and reduce diabetes risk by 15-20%.",
+        "observations": "The patient's BMI has been consistently above 25 kg/m², indicating overweight status, which is a significant risk factor for Type 2 diabetes.",
+        "patient_advise": "Follow the prescribed weight management program, which includes a balanced diet and regular exercise, to achieve a healthier weight and reduce the risk of diabetes.",
+        "risk": "High Body Mass Index (BMI)",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through sustained lifestyle changes and regular follow-ups."
+      },
+      {
+        "doctor_advise": "Alert the healthcare professional about the necessity to fill in the missing blood pressure info through analysis prescription.",
+        "observations": "Blood pressure data is missing, which is crucial for assessing cardiovascular health and diabetes risk.",
+        "patient_advise": "Undergo blood pressure measurements as prescribed by the healthcare provider to ensure comprehensive risk assessment and management.",
+        "risk": "Unknown Blood Pressure",
         "severity_level": "Unknown",
-        "therapeutic_goal": "Obtain a comprehensive blood pressure assessment to evaluate cardiovascular health and manage blood pressure levels through lifestyle modifications and regular monitoring."
+        "therapeutic_goal": "Obtain and maintain regular blood pressure readings to monitor cardiovascular health and diabetes risk."
       }
     ],
     "sources": [
@@ -39,6 +39,6 @@
       "data/patient_2/metadata_patient_2.csv"
     ]
   },
-  "doctor_summary": "- Monitor blood pressure regularly using a prescribed device.\n- Maintain a healthy diet and regular physical activity for weight and cholesterol management.\n- Conduct a comprehensive lipid profile test for detailed cholesterol assessment.\n- Incorporate more physical activity into daily routine for weight management and improved cholesterol levels.\n- Perform a glucose tolerance test for detailed blood sugar assessment.\n- Maintain a consistent sleep schedule and practice stress management techniques for overall health.\n- Conduct a comprehensive blood pressure assessment for cardiovascular health evaluation.",
-  "patient_summary": "- Monitor blood pressure regularly with prescribed device.\n- Maintain a healthy diet rich in fiber, fruits, and vegetables.\n- Engage in regular physical activity: 150 min/week moderate or 75 min/week vigorous, plus 2 days/week strength training.\n- Aim for 7-9 hours of sleep per night.\n- Practice stress management techniques.\n- Consult healthcare provider for blood pressure assessment."
+  "doctor_summary": "- **Diet**: Low-fat, high-fiber foods to reduce cholesterol by 20% in 6 months.\n- **Exercise**: 150 minutes/week to lower blood glucose by 10-15%.\n- **Weight**: 5-10% reduction to improve metabolic health and reduce diabetes risk by 15-20%.\n- **Blood Pressure**: Alert healthcare professional to prescribe analysis for missing info.",
+  "patient_summary": "- Follow prescribed diet; include omega-3 rich foods (fish, nuts) to lower triglycerides.\n- Aim for 150 minutes of moderate exercise weekly to improve insulin sensitivity and lower blood glucose.\n- Adhere to prescribed weight management program (balanced diet, regular exercise) for healthier weight and reduced diabetes risk.\n- Regularly monitor blood pressure as advised by healthcare provider."
 }

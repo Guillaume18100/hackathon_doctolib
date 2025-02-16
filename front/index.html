@@ -42,9 +42,27 @@
           </li>
         </ul>
       </div>
+      <div class="relative border-2 border-dashed border-[#E1EAFE] rounded-lg p-6 text-center transition-all duration-300 hover:border-[#05066D]/30 group" id="uploadContainer">
+        <input type="file" class="hidden" id="fileInput" multiple>
+        
+      <!-- Enhanced Upload Section -->
       <div class="glass-panel rounded-xl p-4">
-        <h2 class="text-xl font-bold text-[#05066D] mb-2">Upload New Files</h2>
-        <input type="file" class="w-full p-2 border border-[#E1EAFE] rounded-lg" multiple>
+        <h2 class="text-xl font-bold text-[#05066D] mb-4">Upload New Files</h2>
+        <div id="uploadContainer" class="upload-container relative cursor-pointer rounded-lg p-6 text-center border-2 border-dashed border-[#05066D]/20 hover:border-[#05066D]/40 transition-colors">
+          <input type="file" id="fileInput" class="hidden" multiple>
+          <div class="space-y-4">
+            <svg class="w-12 h-12 mx-auto text-[#05066D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+            </svg>
+            <div class="space-y-1">
+              <button class="px-6 py-2 rounded-lg font-semibold bg-[#05066D] text-white hover:bg-[#05066D]/90 transition-colors">
+                Select Files
+              </button>
+              <p class="text-sm text-[#05066D]/80 mt-2">or drag and drop files here</p>
+            </div>
+          </div>
+        </div>
+        <div id="fileList" class="mt-4 space-y-2"></div>
       </div>
     </aside>
     

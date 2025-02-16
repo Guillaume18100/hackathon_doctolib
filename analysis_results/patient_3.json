@@ -3,59 +3,51 @@
     "risks": [
       {
         "doctor_advise": "Prescribe a blood pressure monitoring device for the patient to use at home. Recommend regular check-ups to monitor blood pressure levels.",
-        "observations": "Blood pressure data is missing from the observations. This is a critical component for assessing diabetes risk.",
-        "patient_advise": "Monitor your blood pressure regularly at home and keep a log of the readings. Bring this log to your next appointment.",
-        "risk": "High Blood Pressure",
+        "observations": "Blood pressure data is missing. This is a critical component for assessing diabetes risk.",
+        "patient_advise": "Monitor your blood pressure regularly at home using the prescribed device. Keep a log of your readings and bring it to your next appointment.",
+        "risk": "High",
         "severity_level": "Unknown",
-        "therapeutic_goal": "Obtain blood pressure readings to complete the risk assessment and monitor for hypertension."
+        "therapeutic_goal": "Obtain comprehensive blood pressure data to accurately assess diabetes risk."
       },
       {
-        "doctor_advise": "Recommend a balanced diet with reduced carbohydrate intake, focusing on whole grains, fruits, and vegetables. Suggest a consultation with a nutritionist.",
-        "observations": "The patient has a high carb intake, which is a significant risk factor for Type 2 diabetes.",
-        "patient_advise": "Reduce your intake of pasta and bread. Incorporate more whole grains, fruits, and vegetables into your diet. A balanced diet could reduce your risk of diabetes by 15%.",
-        "risk": "Poor Dietary Habits",
+        "doctor_advise": "Recommend a low-carb, high-fiber diet to improve cholesterol levels. Suggest a consultation with a nutritionist for personalized dietary advice.",
+        "observations": "Total cholesterol levels are consistently high, ranging from 240 mg/dL to 258 mg/dL. LDL cholesterol levels are also elevated, ranging from 128 mg/dL to 154 mg/dL. HDL cholesterol levels are low, ranging from 20 mg/dL to 39 mg/dL.",
+        "patient_advise": "Follow a low-carb, high-fiber diet to reduce your cholesterol levels. A balanced diet could reduce your LDL cholesterol level by 20% and increase your HDL cholesterol level by 15%.",
+        "risk": "High",
         "severity_level": "High",
-        "therapeutic_goal": "Improve dietary habits to reduce carbohydrate intake and promote a balanced diet."
+        "therapeutic_goal": "Reduce LDL cholesterol levels to below 100 mg/dL and increase HDL cholesterol levels to above 40 mg/dL."
       },
       {
-        "doctor_advise": "Encourage the patient to engage in regular physical activity. Recommend starting with 30 minutes of moderate exercise, 3-5 times a week.",
+        "doctor_advise": "Prescribe a gradual weight loss program, aiming for a 5-10% reduction in body weight over 6 months. Recommend regular follow-ups to monitor progress.",
+        "observations": "BMI ranges from 35.93 kg/m² to 38.99 kg/m². A BMI over 30 kg/m² is classified as obese, significantly increasing the risk of Type 2 diabetes.",
+        "patient_advise": "Follow the prescribed weight loss program, which includes a balanced diet and regular physical activity. Aim to lose 5-10% of your body weight over the next 6 months.",
+        "risk": "High",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 30 kg/m² through sustained weight loss efforts."
+      },
+      {
+        "doctor_advise": "Encourage the patient to engage in regular physical activity, aiming for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity exercise per week.",
         "observations": "The patient has a sedentary job and minimal exercise, which significantly increases the risk of Type 2 diabetes.",
-        "patient_advise": "Incorporate regular physical activity into your routine. Aim for 30 minutes of moderate exercise, 3-5 times a week. This could reduce your risk of diabetes by 10%.",
-        "risk": "Sedentary Lifestyle",
+        "patient_advise": "Incorporate regular physical activity into your daily routine. Aim for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity exercise per week.",
+        "risk": "High",
         "severity_level": "High",
-        "therapeutic_goal": "Increase physical activity levels to reduce the risk of diabetes."
+        "therapeutic_goal": "Increase physical activity levels to meet the recommended guidelines for diabetes prevention."
       },
       {
-        "doctor_advise": "Prescribe medication to manage cholesterol levels. Recommend regular follow-ups to monitor lipid profile.",
-        "observations": "The patient has high triglycerides (409.0 mg/dL) and LDL cholesterol (150.0 mg/dL), which are significant risk factors for Type 2 diabetes.",
-        "patient_advise": "Take the prescribed medication regularly to manage your cholesterol levels. A balanced diet could reduce your cholesterol level by 40%.",
-        "risk": "High Cholesterol Levels",
+        "doctor_advise": "Monitor the patient's fasting glucose levels regularly. Prescribe Metformin 500mg twice daily to improve insulin sensitivity.",
+        "observations": "Fasting glucose levels range from 138 mg/dL to 192 mg/dL, which are above the normal range (<100 mg/dL) and indicate a high risk of Type 2 diabetes.",
+        "patient_advise": "Take Metformin 500mg twice daily as prescribed. Regularly monitor your fasting glucose levels and maintain a log of your readings.",
+        "risk": "High",
         "severity_level": "High",
-        "therapeutic_goal": "Reduce triglycerides and LDL cholesterol levels to within normal ranges."
+        "therapeutic_goal": "Reduce fasting glucose levels to below 100 mg/dL through medication and lifestyle modifications."
       },
       {
-        "doctor_advise": "Recommend regular monitoring of HbA1c levels. Prescribe medication if necessary.",
-        "observations": "The patient's HbA1c levels are within the prediabetes range (5.7%-6.4%), indicating an increased risk of developing Type 2 diabetes.",
-        "patient_advise": "Monitor your HbA1c levels regularly. A balanced diet and regular exercise could help manage your HbA1c levels.",
-        "risk": "Elevated HbA1c Levels",
-        "severity_level": "High",
-        "therapeutic_goal": "Maintain HbA1c levels within the normal range (<5.7%)."
-      },
-      {
-        "doctor_advise": "Recommend regular monitoring of fasting glucose levels. Prescribe medication if necessary.",
-        "observations": "The patient's fasting glucose levels are elevated (192.0 mg/dL), indicating a strong risk of diabetes.",
-        "patient_advise": "Monitor your fasting glucose levels regularly. A balanced diet and regular exercise could help manage your glucose levels.",
-        "risk": "Elevated Fasting Glucose Levels",
-        "severity_level": "High",
-        "therapeutic_goal": "Maintain fasting glucose levels within the normal range (<100 mg/dL)."
-      },
-      {
-        "doctor_advise": "Recommend weight management strategies, including diet and exercise. Consider prescribing weight loss medication if necessary.",
-        "observations": "The patient has a high BMI (35.9257003537 kg/m²), which significantly increases the risk of Type 2 diabetes.",
-        "patient_advise": "Focus on weight management through diet and exercise. Aim to reduce your BMI by 5%, which could significantly lower your risk of diabetes.",
-        "risk": "High BMI",
-        "severity_level": "High",
-        "therapeutic_goal": "Reduce BMI to within the normal range (18.5-24.9 kg/m²)."
+        "doctor_advise": "Recommend regular follow-ups to monitor HbA1c levels. Prescribe lifestyle modifications and consider pharmacological interventions if necessary.",
+        "observations": "HbA1c levels range from 4.5% to 5.2%, which are within the normal range (<5.7%). However, continuous monitoring is essential to prevent progression to prediabetes or Type 2 diabetes.",
+        "patient_advise": "Maintain a healthy lifestyle to keep your HbA1c levels within the normal range. Regularly monitor your HbA1c levels as advised by your healthcare provider.",
+        "risk": "Moderate",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain HbA1c levels below 5.7% through sustained lifestyle modifications and regular monitoring."
       }
     ],
     "sources": [
@@ -63,6 +55,6 @@
       "data/patient_3/metadata_patient_3.csv"
     ]
   },
-  "doctor_summary": "- **Home Monitoring:** Use a blood pressure monitoring device at home and attend regular check-ups.\n- **Diet:** Follow a balanced, low-carb diet focused on whole grains, fruits, and vegetables. Consult with a nutritionist.\n- **Exercise:** Engage in regular physical activity, starting with 30 minutes of moderate exercise, 3-5 times a week.\n- **Medication and Monitoring:**\n  - Manage cholesterol levels with medication and regular lipid profile follow-ups.\n  - Monitor HbA1c and fasting glucose levels regularly. Prescribe medication if needed.\n- **Weight Management:** Implement diet and exercise strategies. Consider weight loss medication if necessary.",
-  "patient_summary": "- **Home Health Monitoring:**\n  - Track blood pressure daily.\n  - Monitor HbA1c and fasting glucose levels regularly.\n\n- **Dietary Changes:**\n  - Limit pasta and bread.\n  - Increase whole grains, fruits, and vegetables.\n  - A balanced diet can reduce the risk of diabetes by 15%, lower cholesterol by 40%, and help manage HbA1c and glucose levels.\n\n- **Exercise:**\n  - Aim for 30 minutes of moderate exercise, 3-5 times a week.\n  - Regular exercise can reduce the risk of diabetes by 10% and help manage HbA1c and glucose levels.\n\n- **Medication and Weight Management:**\n  - Take prescribed medication regularly for cholesterol management.\n  - Aim to reduce BMI by 5% through diet and exercise for a significant lower risk of diabetes."
+  "doctor_summary": "- **Home Monitoring**: Use a blood pressure device at home; regular check-ups for blood pressure.\n- **Diet**: Low-carb, high-fiber diet; consult a nutritionist.\n- **Weight Loss**: Gradual program to reduce body weight by 5-10% over 6 months; regular follow-ups.\n- **Exercise**: At least 150 min/week moderate or 75 min/week vigorous activity.\n- **Glucose Management**: Regular fasting glucose checks; Metformin 500mg twice daily.\n- **HbA1c Monitoring**: Regular follow-ups; lifestyle changes and possible pharmacological interventions.",
+  "patient_summary": "- Monitor blood pressure at home, log readings.\n- Follow a low-carb, high-fiber diet to improve cholesterol levels.\n- Aim to lose 5-10% of body weight in 6 months with diet and exercise.\n- Do 150 min/week of moderate or 75 min/week of vigorous exercise.\n- Take Metformin 500mg twice daily, monitor fasting glucose.\n- Maintain healthy lifestyle and monitor HbA1c levels."
 }
