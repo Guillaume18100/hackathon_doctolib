@@ -1,0 +1,52 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a balanced diet plan focusing on low-fat, high-fiber foods to reduce BMI. Recommend regular physical activity, aiming for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity activity per week, along with muscle-strengthening activities on 2 or more days a week.",
+        "observations": "The patient's BMI has consistently been above 25 kg/m², which is a significant risk factor for Type 2 diabetes. The highest recorded BMI was 28.86 kg/m².",
+        "patient_advise": "Follow the prescribed diet plan and engage in regular physical activity as advised by your doctor. Aim to reduce your BMI by 5-10% through a balanced diet and regular exercise. A balanced diet could reduce cholesterol level by 40%.",
+        "risk": "High BMI",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through diet and exercise."
+      },
+      {
+        "doctor_advise": "Prescribe metformin 500mg twice daily to improve insulin sensitivity and monitor HbA1c levels every 3 months.",
+        "observations": "The patient's HbA1c levels have been fluctuating but generally above the normal range, with the highest value being 4.2%. This indicates a higher risk of developing Type 2 diabetes.",
+        "patient_advise": "Take metformin 500mg twice daily as prescribed and follow up with your doctor every 3 months to monitor your HbA1c levels. Aim to keep your HbA1c levels below 5.7%.",
+        "risk": "Elevated HbA1c Levels",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain HbA1c levels below 5.7% through medication and lifestyle changes."
+      },
+      {
+        "doctor_advise": "Prescribe a low-carbohydrate diet and regular monitoring of fasting glucose levels every 3 months.",
+        "observations": "The patient's fasting glucose levels have been above 100 mg/dL, with the highest value being 122 mg/dL. This indicates a higher risk of developing Type 2 diabetes.",
+        "patient_advise": "Follow a low-carbohydrate diet and monitor your fasting glucose levels every 3 months. Aim to keep your fasting glucose levels below 100 mg/dL.",
+        "risk": "Elevated Fasting Glucose Levels",
+        "severity_level": "High",
+        "therapeutic_goal": "Maintain fasting glucose levels below 100 mg/dL through diet and regular monitoring."
+      },
+      {
+        "doctor_advise": "Prescribe atorvastatin 10mg daily to lower LDL cholesterol levels and monitor lipid profile every 6 months.",
+        "observations": "The patient's LDL cholesterol levels have been above 130 mg/dL, with the highest value being 156 mg/dL. This indicates a higher risk of developing Type 2 diabetes.",
+        "patient_advise": "Take atorvastatin 10mg daily as prescribed and follow up with your doctor every 6 months to monitor your lipid profile. Aim to keep your LDL cholesterol levels below 130 mg/dL.",
+        "risk": "Elevated LDL Cholesterol Levels",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain LDL cholesterol levels below 130 mg/dL through medication and regular monitoring."
+      },
+      {
+        "doctor_advise": "Alert the healthcare professional about the necessity to fill in the missing info through blood pressure measurement.",
+        "observations": "The patient's blood pressure data is missing, which is crucial for assessing the risk of Type 2 diabetes.",
+        "patient_advise": "Schedule an appointment with your doctor to measure your blood pressure and fill in the missing information.",
+        "risk": "Missing Blood Pressure Data",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Obtain blood pressure data to assess the risk of Type 2 diabetes."
+      }
+    ],
+    "sources": [
+      "data/patient_2/historical_observations_patient_2.csv",
+      "data/patient_2/metadata_patient_2.csv"
+    ]
+  },
+  "doctor_summary": "- **Diet and Exercise:** Advise low-fat, high-fiber diet to reduce BMI; recommend 150 min/week moderate or 75 min/week vigorous exercise, plus strength training 2+ days/week.\n- **Medications and Monitoring:**\n  - Metformin 500mg twice daily; monitor HbA1c every 3 months.\n  - Low-carb diet; monitor fasting glucose every 3 months.\n  - Atorvastatin 10mg daily; monitor lipid profile every 6 months.\n- **Additional Care:** Monitor blood pressure regularly.",
+  "patient_summary": "- Maintain a healthy lifestyle with a prescribed diet and regular exercise to reduce BMI by 5-10% and lower cholesterol by 40%.\n- Take medications as prescribed:\n  - Metformin 500mg twice daily (HbA1c target below 5.7%).\n  - Atorvastatin 10mg daily (LDL cholesterol target below 130 mg/dL).\n- Follow a low-carb diet and monitor fasting glucose levels (target below 100 mg/dL).\n- Regularly follow up with your doctor to monitor HbA1c levels (every 3 months), lipid profile (every 6 months), and blood pressure (schedule appointment)."
+}

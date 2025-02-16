@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>PathAI - Patient Dashboard</title>
-  <!-- Tailwind CSS from CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
+  <!-- Our Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,57 +16,46 @@
   
   <!-- Main Layout -->
   <div class="flex">
-    <!-- Left Sidebar: Search, Patient List, Upload Files -->
+    <!-- Left Sidebar: Search, Patient List, etc. -->
     <aside class="w-1/4 p-4 border-r border-gray-300 space-y-6">
-      <!-- Search Patients -->
       <div>
-        <input
-          type="text"
-          id="patientSearch"
-          placeholder="Search Patients..."
-          class="w-full p-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#05066D]"
-        />
+        <input type="text" id="patientSearch" placeholder="Search Patients..." class="w-full p-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#05066D]">
       </div>
-      <!-- Patient List -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Patient List</h2>
         <ul id="patientList" class="space-y-2">
-          <!-- Example patients with directories -->
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{"name": "Patient 0", "age": 42, "directory": "data/patient_0"}'>
+              data-patient='{"name":"Patient 0","age":42,"id":"patient_0"}'>
             Patient 0
           </li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{"name": "Patient 1", "age": 50, "directory": "data/patient_1"}'>
+              data-patient='{"name":"Patient 1","age":50,"id":"patient_1"}'>
             Patient 1
           </li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{"name": "Patient 2", "age": 60, "directory": "data/patient_2"}'>
+              data-patient='{"name":"Patient 2","age":60,"id":"patient_2"}'>
             Patient 2
           </li>
           <li class="cursor-pointer p-2 bg-white rounded hover:bg-blue-100"
-              data-patient='{"name": "Patient 3", "age": 38, "directory": "data/patient_3"}'>
+              data-patient='{"name":"Patient 3","age":38,"id":"patient_3"}'>
             Patient 3
           </li>
         </ul>
       </div>
-      <!-- Upload New Files -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-2">Upload New Files</h2>
         <input type="file" class="w-full p-2 border border-[#E1EAFE] rounded-lg" multiple>
       </div>
     </aside>
     
-    <!-- Center Panel: Condition Tables Only -->
+    <!-- Center Panel: Condition Tables -->
     <main class="w-1/2 p-4">
       <div id="patientOverview" class="glass-panel p-6 rounded shadow-md mb-4">
         <h2 class="text-2xl font-bold mb-4" id="patientNameTitle">Patient Overview</h2>
         <p>Select a patient from the list to load their AI analysis.</p>
       </div>
-
       <div class="glass-panel p-4" id="conditionTables" hidden>
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Condition Tables</h2>
-        
         <!-- Diabetes Table -->
         <div class="mb-6">
           <h3 class="text-lg font-semibold text-[#05066D] mb-2">Diabetes</h3>
@@ -82,12 +68,12 @@
               </tr>
             </thead>
             <tbody>
-              <!-- Filled dynamically -->
+              <!-- Dynamically filled -->
             </tbody>
           </table>
         </div>
 
-        <!-- Cardiovascular Table (no data) -->
+        <!-- Cardiovascular / Hypertension => "No data" -->
         <div class="mb-6">
           <h3 class="text-lg font-semibold text-[#05066D] mb-2">Cardiovascular</h3>
           <table class="min-w-full border-collapse mt-2" id="cardioTable">
@@ -107,8 +93,6 @@
             </tbody>
           </table>
         </div>
-
-        <!-- Hypertension Table (no data) -->
         <div class="mb-6">
           <h3 class="text-lg font-semibold text-[#05066D] mb-2">Hypertension</h3>
           <table class="min-w-full border-collapse mt-2" id="hyperTable">
@@ -131,9 +115,8 @@
       </div>
     </main>
     
-    <!-- Right Sidebar: AI Analysis Summaries and AI Opinion Sources -->
+    <!-- Right Sidebar: Summaries + AI Opinion Sources -->
     <aside id="rightSidebar" class="w-1/4 p-4 border-l border-gray-300 space-y-6">
-      <!-- AI Analysis Summaries -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">AI Analysis Summaries</h2>
         <div id="doctorSummaryPanel" class="mb-4">
@@ -145,16 +128,12 @@
           <div id="patientSummaryContainer">No data yet.</div>
         </div>
       </div>
-
-      <!-- AI Opinion Sources -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">AI Opinion Sources</h2>
         <div id="aiSources">
           <p>Select a patient to view source documents.</p>
         </div>
       </div>
-
-      <!-- Additional Information -->
       <div class="glass-panel rounded-xl p-4">
         <h2 class="text-xl font-bold text-[#05066D] mb-4">Additional Information</h2>
         <p class="text-[#05066D]">
@@ -164,7 +143,6 @@
     </aside>
   </div>
   
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>

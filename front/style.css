@@ -28,7 +28,7 @@ th {
   color: #05066D;
 }
 
-/* Bullet style for lists */
+/* bulletify styling */
 ul.list-disc {
   list-style-type: disc;
   margin-left: 1.5rem;

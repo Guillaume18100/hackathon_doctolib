@@ -1,0 +1,68 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a blood pressure monitoring device for the patient to track their blood pressure regularly. Advise the patient to maintain a balanced diet with reduced sodium intake to manage blood pressure levels.",
+        "observations": "The patient's blood pressure data is missing, which is crucial for assessing diabetes risk. High blood pressure is a significant risk factor for diabetes.",
+        "patient_advise": "Monitor your blood pressure regularly using the prescribed device. Follow a low-sodium diet to help manage your blood pressure levels.",
+        "risk": "High Blood Pressure",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Regularly monitor blood pressure to ensure it stays within the normal range (below 130/85 mmHg)."
+      },
+      {
+        "doctor_advise": "Recommend the patient to engage in regular physical activity, aiming for at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity exercise per week.",
+        "observations": "The patient's current physical activity level is low (Gym 1x/month), which increases the risk of diabetes.",
+        "patient_advise": "Increase your physical activity to at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity exercise per week. This could reduce your diabetes risk by 10-15%.",
+        "risk": "Sedentary Lifestyle",
+        "severity_level": "High",
+        "therapeutic_goal": "Increase physical activity to meet the recommended guidelines for diabetes prevention."
+      },
+      {
+        "doctor_advise": "Advise the patient to maintain a balanced diet and consider consulting a nutritionist for personalized dietary recommendations.",
+        "observations": "The patient's dietary habits are balanced, which is positive for diabetes risk management.",
+        "patient_advise": "Continue maintaining a balanced diet. Consulting a nutritionist could help you optimize your diet further and reduce your diabetes risk by an additional 5-10%.",
+        "risk": "Dietary Habits",
+        "severity_level": "Low",
+        "therapeutic_goal": "Maintain a balanced diet and consider personalized dietary recommendations from a nutritionist."
+      },
+      {
+        "doctor_advise": "Monitor the patient's HbA1c levels regularly and consider prescribing metformin if prediabetes is confirmed.",
+        "observations": "The patient's HbA1c level is 3.3%, which is below the prediabetes range, indicating a low risk of diabetes.",
+        "patient_advise": "Continue monitoring your HbA1c levels as part of your regular check-ups. Maintaining healthy lifestyle habits can help keep your HbA1c levels within the normal range.",
+        "risk": "HbA1c Levels",
+        "severity_level": "Low",
+        "therapeutic_goal": "Maintain HbA1c levels within the normal range (below 5.7%)."
+      },
+      {
+        "doctor_advise": "Recommend the patient to focus on weight management through a combination of diet and exercise. Consider referring the patient to a weight management program.",
+        "observations": "The patient's BMI is 31.37 kg/m², which is in the obese range and significantly increases the risk of diabetes.",
+        "patient_advise": "Focus on weight management through a combination of diet and exercise. Aim to reduce your BMI by 5-10%, which could decrease your diabetes risk by 10-20%.",
+        "risk": "Body Mass Index (BMI)",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through sustained lifestyle changes."
+      },
+      {
+        "doctor_advise": "Prescribe a lipid panel test to monitor the patient's cholesterol levels regularly. Advise the patient to follow a heart-healthy diet and consider statin therapy if LDL levels remain high.",
+        "observations": "The patient's LDL cholesterol levels are above 130 mg/dL, which increases the risk of diabetes.",
+        "patient_advise": "Follow a heart-healthy diet and consider statin therapy if your LDL cholesterol levels remain high. Aim to reduce your LDL cholesterol by 20-30% to decrease your diabetes risk.",
+        "risk": "Cholesterol Levels",
+        "severity_level": "Moderate",
+        "therapeutic_goal": "Maintain LDL cholesterol levels below 100 mg/dL through diet, exercise, and medication if necessary."
+      },
+      {
+        "doctor_advise": "Advise the patient to maintain a balanced diet and consider consulting a nutritionist for personalized dietary recommendations.",
+        "observations": "The patient's fasting glucose levels are within the normal range, indicating a low risk of diabetes.",
+        "patient_advise": "Continue maintaining a balanced diet. Consulting a nutritionist could help you optimize your diet further and reduce your diabetes risk by an additional 5-10%.",
+        "risk": "Fasting Glucose",
+        "severity_level": "Low",
+        "therapeutic_goal": "Maintain fasting glucose levels within the normal range (below 100 mg/dL)."
+      }
+    ],
+    "sources": [
+      "data/patient_0/historical_observations_patient_0.csv",
+      "data/patient_0/metadata_patient_0.csv"
+    ]
+  },
+  "doctor_summary": "- Monitor blood pressure regularly using a prescribed device.\n- Reduce sodium intake and maintain a balanced diet.\n- Engage in regular physical activity (150 min moderate or 75 min vigorous per week).\n- Monitor HbA1c levels and consider metformin if prediabetes is confirmed.\n- Focus on weight management through diet and exercise.\n- Monitor cholesterol levels regularly with lipid panel tests.\n- Consider statin therapy if LDL levels remain high.\n- Consult a nutritionist for personalized dietary recommendations.",
+  "patient_summary": "- Regularly monitor blood pressure and follow a low-sodium diet.\n- Achieve at least 150 minutes of moderate or 75 minutes of vigorous exercise per week to reduce diabetes risk.\n- Maintain a balanced diet and consider consulting a nutritionist to optimize it and further reduce diabetes risk.\n- Regularly check HbA1c levels and maintain healthy habits to keep them within normal range.\n- Manage weight through diet and exercise, aiming to reduce BMI by 5-10% to decrease diabetes risk.\n- Follow a heart-healthy diet and consider statin therapy if needed to reduce LDL cholesterol by 20-30% and decrease diabetes risk."
+}

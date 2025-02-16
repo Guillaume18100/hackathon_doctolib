@@ -1,0 +1,52 @@
+{
+  "initial_response": {
+    "risks": [
+      {
+        "doctor_advise": "Prescribe a blood pressure monitoring device for the patient to track their blood pressure regularly. Advise the patient to maintain a healthy weight through a balanced diet and regular physical activity.",
+        "observations": "The patient's blood pressure data is missing, which is crucial for assessing diabetes risk. High blood pressure is a significant risk factor for diabetes.",
+        "patient_advise": "Monitor your blood pressure regularly using the prescribed device. Aim to maintain a healthy weight through a balanced diet and regular physical activity.",
+        "risk": "High Blood Pressure",
+        "severity_level": "Unknown",
+        "therapeutic_goal": "Regularly monitor blood pressure and maintain it within the normal range (below 130/85 mmHg)."
+      },
+      {
+        "doctor_advise": "Prescribe a low-carb, high-fiber diet to improve cholesterol levels. Recommend regular exercise, such as brisk walking for 30 minutes, 5 days a week, to help lower cholesterol levels.",
+        "observations": "The patient has high total cholesterol (258 mg/dL), high LDL cholesterol (154 mg/dL), and low HDL cholesterol (31 mg/dL). High cholesterol levels are a significant risk factor for diabetes.",
+        "patient_advise": "Follow a low-carb, high-fiber diet to improve your cholesterol levels. Aim to exercise regularly, such as brisk walking for 30 minutes, 5 days a week. A balanced diet could reduce cholesterol level by 40%.",
+        "risk": "High Cholesterol",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce total cholesterol to below 200 mg/dL, LDL cholesterol to below 100 mg/dL, and increase HDL cholesterol to above 40 mg/dL for men and 50 mg/dL for women."
+      },
+      {
+        "doctor_advise": "Prescribe a diet plan focusing on reducing carbohydrate intake and increasing physical activity. Recommend regular follow-ups to monitor glucose levels.",
+        "observations": "The patient has high fasting glucose levels (178 mg/dL), which is a strong indicator of diabetes risk.",
+        "patient_advise": "Follow the prescribed diet plan to reduce your carbohydrate intake and increase your physical activity. Regularly monitor your glucose levels as advised by your doctor.",
+        "risk": "High Fasting Glucose",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce fasting glucose levels to below 100 mg/dL."
+      },
+      {
+        "doctor_advise": "Prescribe a weight management program that includes a balanced diet and regular physical activity. Recommend regular follow-ups to monitor weight loss progress.",
+        "observations": "The patient has a high BMI (35.92 kg/m²), which significantly increases the risk of diabetes. Each 1 kg/m² increase in BMI increases risk by 1-3%.",
+        "patient_advise": "Follow the prescribed weight management program to achieve a healthy weight. Regularly monitor your progress as advised by your doctor.",
+        "risk": "High BMI",
+        "severity_level": "High",
+        "therapeutic_goal": "Reduce BMI to below 25 kg/m² through a balanced diet and regular physical activity."
+      },
+      {
+        "doctor_advise": "Prescribe a lifestyle modification program that includes regular physical activity and a balanced diet. Recommend regular follow-ups to monitor progress.",
+        "observations": "The patient has a sedentary lifestyle with minimal exercise, which significantly increases the risk of diabetes. Increased risk for those with minimal or no regular physical activity.",
+        "patient_advise": "Follow the prescribed lifestyle modification program to increase your physical activity and maintain a balanced diet. Regularly monitor your progress as advised by your doctor.",
+        "risk": "Sedentary Lifestyle",
+        "severity_level": "High",
+        "therapeutic_goal": "Increase physical activity to at least 150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic activity per week."
+      }
+    ],
+    "sources": [
+      "data/patient_3/historical_observations_patient_3.csv",
+      "data/patient_3/metadata_patient_3.csv"
+    ]
+  },
+  "doctor_summary": "- Prescribe blood pressure monitor for regular tracking.\n- Advise healthy weight, balanced diet, and regular exercise (e.g., brisk walking 30 min, 5 days/week).\n- Recommend low-carb, high-fiber diet and regular follow-ups for cholesterol and glucose monitoring.\n- Implement weight management and lifestyle modification programs with regular follow-ups.",
+  "patient_summary": "- Regularly monitor blood pressure, glucose levels, and progress towards health goals as advised by your doctor.\n- Maintain a healthy weight through a balanced, low-carb, high-fiber diet and regular physical activity.\n- Aim for regular exercise, such as brisk walking for 30 minutes, 5 days a week.\n- Follow prescribed diet plans, weight management programs, and lifestyle modification programs."
+}
